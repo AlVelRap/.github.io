@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prueba Iconos de Material design</title>
+    <meta charset="UTF-8" />
+    <link href="./static/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <header><h1>Iconos de Material<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons" target="_blank"><span class="material-icons">link</span></a></h1></header>
+    <div>
+        <h2>URL fuentes de Material Icons</h2>
+        <a class="boton" href="https://fonts.google.com/icons?selected=Material+Icons&icon.platform=web&icon.style=Filled" target="_blank">Link a la página <span class="material-icons md-18">link</span></a>
+        
+        <h2>Como usar iconos en HTML<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#using_the_icons_in_html" target="_blank"><span class="material-icons">link</span></a></h2>
+        
+        <p>La forma más sencilla de configurar las fuentes de íconos para usarlas en cualquier página web es mediante Google Fonts. Lo único que debes hacer es incluir una sola línea de HTML:</p>
+        <p><code>&ltlink href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"></code></p>
+        <p>Al igual que otras fuentes web de Google, se publicará el CSS correcto para activar la fuente específica del navegador. Se declarará una clase de CSS adicional llamada <code>.material-icons</code>. Cualquier elemento que use esta clase tendrá el CSS correcto para renderizar estos íconos desde la fuente web.</p>
+        <p>Es muy fácil incorporar íconos a tu página web. Este es un ejemplo pequeño:</p>
+        <p>rostro</p>
+        <table>
+            <tr>
+                <td><span class="material-icons md-24">&#xE87C;</span></td>
+                <td><code>&ltspan class="material-icons">face&lt/span></code></td>
+            </tr>
+        </table>
+        <p>En este ejemplo, se usa una función tipográfica llamada ligaduras, que permite renderizar un glifo de ícono mediante su nombre textual. El navegador web realiza el reemplazo de forma automática y proporciona un código más legible que la referencia equivalente de caracteres numéricos.</p>
+        <p>Esta función es compatible con la mayoría de los navegadores actualizados en computadoras de escritorio y dispositivos móviles.</p>
+        <p>Para los navegadores que no admiten ligaduras, recurre a la especificación de íconos mediante referencias numéricas de caracteres, como en el siguiente ejemplo:</p>
+        <table>
+            <tr>
+                <td><span class="material-icons md-24">&#xE87C;</span></td>
+                <td><code>&ltspan class="material-icons">&amp#xE87C;&lt/span></code></td>
+            </tr>
+        </table>
+
+
+        <h2>Como dar estilo a los Iconos en Material Design<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#styling_icons_in_material_design" target="_blank"><span class="material-icons">link</span></a></h2>        
+        <p>Estos íconos se diseñaron para cumplir con los lineamientos de material design, y se ven mejor cuando se usan los tamaños y colores de íconos recomendados. Los siguientes estilos facilitan la aplicación de nuestros tamaños, colores y estados de actividad recomendados.</p>
+        <p><code>/* Rules for sizing the icon. */<br>
+            .material-icons.md-18 { font-size: 18px; }<br>
+            .material-icons.md-24 { font-size: 24px; }<br>
+            .material-icons.md-36 { font-size: 36px; }<br>
+            .material-icons.md-48 { font-size: 48px; }<br>
+            <br>
+            /* Rules for using icons as black on a light background. */<br>
+            .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }<br>
+            .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }<br>
+            <br>
+            /* Rules for using icons as white on a dark background. */<br>
+            .material-icons.md-light { color: rgba(255, 255, 255, 1); }<br>
+            .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }</code></p>
+
+        <h2>Dimensionamiento<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#sizing" target="_blank"><span class="material-icons">link</span></a></h2>
+        <p>Aunque los íconos de la fuente se pueden ajustar a cualquier tamaño, de acuerdo con los lineamientos de íconos de material design, recomendamos que se muestren en 18, 24, 36 o 48 píxeles. El tamaño predeterminado es de 24 px.</p>
+        <p>Reglas de CSS para los lineamientos de tamaño estándar de Material Design:</p>
+        <p><code>.material-icons.md-18 { font-size: 18px; }<br>
+            .material-icons.md-24 { font-size: 24px; }<br>
+            .material-icons.md-36 { font-size: 36px; }<br>
+            .material-icons.md-48 { font-size: 48px; }
+            </code></p>
+        <p>Los íconos de material se ven mejor en 24 px, pero si un ícono debe mostrarse en un tamaño alternativo, usar las reglas de CSS anteriores puede ser útil:</p>
+        <table>
+            <tr>
+                <td><span class="material-icons md-18">face</span><br>18px</td>
+                <td><code>&ltspan class="material-icons md-18">face&lt/span></code></td>
+            </tr>
+            <tr>
+                <td><span class="material-icons md-24">face</span><br>24px</td>
+                <td><code>&ltspan class="material-icons md-24">face&lt/span></code></td>
+            </tr>
+            <tr>
+                <td><span class="material-icons md-36">face</span><br>36px</td>
+                <td><code>&ltspan class="material-icons md-36">face&lt/span></code></td>
+            </tr>
+            <tr>
+                <td><span class="material-icons md-48">face</span><br>48px</td>
+                <td><code>&ltspan class="material-icons md-48">face&lt/span></code></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <h2>Colorear <a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#coloring" target="_blank"><span class="material-icons">link</span></a></h2>
+        
+        <p>La fuente del ícono permite darle estilo fácilmente a un ícono de cualquier color. Según los lineamientos para íconos de material design, te recomendamos que uses íconos negros con una opacidad del 54% o blancos con una opacidad del 100% cuando uses estos íconos en fondos claros u oscuros, respectivamente. Si los íconos están inhabilitados o inactivos, usa negro al 26% o blanco al 30% para fondos claros y oscuros, respectivamente.</p>
+        <p>A continuación, se incluyen algunos ejemplos en los que se usan los estilos de CSS de material descritos con anterioridad:</p>
+        <p><code>.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }<br>
+            .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }<br>
+            <br>
+            .material-icons.md-light { color: rgba(255, 255, 255, 1); }<br>
+            .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }<br>
+            </code></p>
+        <p>Ejemplo para dibujar un ícono sobre un fondo claro con un color oscuro de primer plano:</p>
+        <table>
+            <tr>
+                <td><span class="material-icons md-dark">face</span><br>Normal</td>
+                <td><code>&ltspan class="material-icons md-dark">face&lt/span></code></td>
+            </tr>
+            <tr>
+                <td><span class="material-icons md-dark md-inactive">face</span><br>Inhabilitada</td>
+                <td><code>&ltspan class="material-icons md-dark md-inactive">face&lt/span></code></td>
+            </tr>
+        </table>
+        <p>Ejemplo para dibujar un ícono sobre un fondo oscuro con un color de primer plano claro:</p>
+        <table>
+            <tr>
+                <td class = "oscuro"><span class="material-icons md-light">face</span><br>Normal</td>
+                <td><code>&ltspan class="material-icons md-light">face&lt/span></code></td>
+            </tr>
+            <tr>
+                <td class = "oscuro"><span class="material-icons md-light md-inactive">face</span><br>Inhabilitada</td>
+                <td><code>&ltspan class="material-icons md-light md-inactive">face&lt/span></code></td>
+            </tr>
+        </table>
+        <p>Para establecer un color de ícono personalizado, define una regla de CSS que especifique el color deseado para la fuente:</p>
+        <p><code>.material-icons.orange600 { color: #FB8C00; }</code></p>
+        <p>Luego, usa la clase para referirte al ícono:</p>
+        <table>
+            <tr>
+                <td class = "oscuro"><span class="material-icons orange600">face</span><br>Normal</td>
+                <td><code>&ltspan class="material-icons orange600">face&lt/span></code></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <h2>Íconos de imágenes para la Web<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#icon_images_for_the_web" target="_blank"><span class="material-icons">link</span></a></h2>
+        <p>Los íconos de material también están disponibles como imágenes normales, tanto en formato PNG como SVG.</p>
+        
+        <h2>SVG <a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#svg" target="_blank"><span class="material-icons">link</span></a></h2>
+        <p>Los íconos de material se proporcionan como SVG adecuados para proyectos web. Los íconos individuales se pueden descargar desde la biblioteca de íconos de material. Los SVG también están disponibles en los íconos de material design del repositorio de Git en la ruta:</p>
+        <p><code>material-design-icons/src/</code></p>
+        <p>Por ejemplo, los íconos de mapa están en src/maps:</p>
+        <p><code>material-design-icons/src/maps/</code></p>
+        <p>Si se usan varios íconos en un sitio web, se recomienda crear hojas de objetos con las imágenes. Para obtener más información, consulta la documentación en el directorio de objetos del repositorio de git.</p>
+
+        <h2>PNG<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#png" target="_blank"><span class="material-icons">link</span></a></h2>
+        <p>PNG es la forma más tradicional de mostrar íconos en la Web. Nuestras descargas de la biblioteca de íconos de material proporcionan densidades de uno y dobles para cada ícono. Se denominan 1x y 2x, respectivamente en la descarga. Los íconos también están disponibles en el repositorio de Git en:</p>
+        <p><code>material-design-icons/png/</code></p>
+        <p>Si se usan varios íconos en un sitio web, se recomienda crear hojas de objetos con las imágenes. Para obtener más información, consulta las recomendaciones en el directorio de objetos del repositorio de git.</p>
+
+        <h2>Íconos de derecha a izquierda en la Web<a class="icono-link" href="https://developers.google.com/fonts/docs/material_icons#rtl_icons_on_the_web" target="_blank"><span class="material-icons">link</span></a></h2>        
+        <p>Te recomendamos usar el siguiente artículo como manual para la escritura de derecha a izquierda en la Web: </p>
+        <p><a class="boton" href="https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1" target="_blank">https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1</a></p>
+        <p><a class="boton" href="https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2" target="_blank"> https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2</a></p>
+        <p>De forma predeterminada, en la Web, los íconos no se duplican cuando se duplica la dirección del diseño. Cuando sea necesario, deberá reflejar los íconos apropiados.</p>
+        <p>En el siguiente ejemplo, se muestra cómo implementar una regla de CSS de derecha a izquierda simple. También puedes verlo en el codelab.</p>
+        <p>página.html</p>
+        <p><code>&lthtml dir="rtl"><br>
+            &nbsp&ltimg class="material-icons" src="my_icon.png" alt="my icon"/><br>
+            &lt/html>
+          </code></p>
+        <p>página.css</p>
+        <p><code>html[dir="rtl"] .icon {<br>
+            &nbsp-moz-transform: scaleX(-1);<br>
+            &nbsp-o-transform: scaleX(-1);<br>
+            &nbsp-webkit-transform: scaleX(-1);<br>
+            &nbsptransform: scaleX(-1);<br>
+            &nbspfilter: FlipH;<br>
+            &nbsp-ms-filter: "FlipH";<br>
+          }
+          </code></p>
+
+
+
+    </div>
+
+
+<!-- 
+    <a href="#" target="_parent"><span class="material-icons">face</span></a>
+    <a href="#" target="_parent"><span class="material-icons">home</span></a>
+    <button>
+        <span class="material-icons md-48">search</span>
+    </button>
+    <button>
+        <span class="material-icons">calendar_today</span>
+    </button>
+    <button>
+        <span class="material-icons md-36">savings</span>
+    </button>
+    <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 0 24 24" width="150px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M8.5 14.5L4 19l1.5 1.5L9 17h2l-2.5-2.5zM15 1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 20.01L18 24l-2.99-3.01V19.5l-7.1-7.09c-.31.05-.61.07-.91.07v-2.16c1.66.03 3.61-.87 4.67-2.04l1.4-1.55c.19-.21.43-.38.69-.5.29-.14.62-.23.96-.23h.03C15.99 6 17 7.01 17 8.25V17l-.92-.83-3.58-3.58v-2.27c-.63.52-1.43 1.02-2.29 1.39L16.5 18H18l3 3.01z"/></svg>
+    <button>
+        <img class="material-icons" src="./static/2x/sharp_accessible_forward_black_24dp.png">
+    </button> -->
+</body>
+
+</html>

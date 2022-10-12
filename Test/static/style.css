@@ -1,10 +1,28 @@
 body{
-    background-color:#eee;
+    background-color:#5d6d61;
+    width: 100%;
 }
+h1{
+    color: white;
+}
+
+
+
+header{
+    margin: auto;
+    max-width: 700px;
+}
+
 div{
     max-width: 700px;
     text-align: justify;
-    margin: 10px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #eee;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 button{
     background-color: #334237;
@@ -22,26 +40,41 @@ a:hover, button:hover{
     color: #b0ff57
 }
 
-a{
+td{
+    text-align: center;
+}
+table{
+    margin: auto;
+}
+
+.boton{
     background-color: #334237;
     color:#76ff03;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 4px;
+    border-radius: 2px;
     vertical-align:middle;
     align-content: center;
     text-decoration: none;
 }
 
-.material-icons{
-    color:#76ff03;
-    /* color:#334237;
-    background-color: #76ff03; */
+.oscuro{
+    background-color: #334237;
+    color: white;
 }
+
+.icono-link{
+    color: black;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.material-icons.orange600 { color: #FB8C00; }
+
 
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 360px; }
+.material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
 /* Rules for using icons as black on a light background. */
