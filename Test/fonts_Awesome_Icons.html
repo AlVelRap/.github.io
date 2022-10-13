@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iconos de FontAwesome</title>
+    <meta charset="UTF-8" />
+    <link href="./static/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/45614cee74.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header><h1>Iconos de Font Awesome</h1></header>
+    <div>
+        <h2>URL fuentes de Font Awesome Icons</h2>
+        <a class="boton" href="https://fontawesome.com/icons" target="_blank">Link a la página <i class="fa-solid fa-link"></i></a>
+        
+        <h2>Como empezar <a class="icono-link" href="https://fontawesome.com/kits/45614cee74/use"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Añadimos el siguiente <code>script</code> en el <code>head</code> de nuestra pagina web o de los templates que hagamos</p>
+        <p><code>&ltscript src="https://kit.fontawesome.com/45614cee74.js" crossorigin="anonymous">&lt/script></code></p>
+
+        <h2>Como instanciar un icono<a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/how-to#add-icons-to-html"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Para añadir iconos a nuestra pagina debemos usar la etiqueta <code>&lti></code> con la clase que nos indique la página.</p>
+        <p><code>&lti class="fa-solid fa-face-smile">&lt/i></code></p>
+
+        <h2>Distintos estilos y familias<a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/how-to#setting-different-families-styles"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Aquí tenemos un ejemplo de como quedarían distintos estilos y familias</p>
+        <table width = "700">
+            <tr>
+                <td>
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-regular fa-user"></i>
+                    <!-- <i class="fa-light fa-user"></i>
+                    <i class="fa-thin fa-user"></i>
+                    <i class="fa-duotone fa-user"></i> -->
+                    <i class="fa-brands fa-font-awesome"></i>
+                    <i class="fa-sharp fa-solid fa-user"></i>
+                </td>
+            </tr>
+            <tr><td><p><code>
+                &lt!-- all styles of icons (in Font Awesome Classic by default) --><br>
+                &lti class="fa-solid fa-user">&lt/i><br>
+                <!-- &lti class="fa-regular fa-user">&lt/i><br>
+                &lti class="fa-light fa-user">&lt/i><br>
+                &lti class="fa-thin fa-user">&lt/i><br> -->
+                &lti class="fa-duotone fa-user">&lt/i></code></p>
+                <p><code>&lt!-- a Brands icon --><br>
+                &lti class="fa-brands fa-font-awesome">&lt/i></code></p>
+                <p><code>&lt!-- a specifically set Font Awesome Sharp Solid icon --><br>
+                &lti class="fa-sharp fa-solid fa-user">&lt/i>
+            </code></p></td></tr>
+        </table>
+    </div>
+    <div>
+        <h2>Añadir Iconos usando Pseduo-Elementos en CSS<a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/pseudo-elements#add-an-icon-using-css-pseudo-elements"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Primero, deberá agregar algunas propiedades CSS comunes que se aplican a todos los íconos. Es mejor eliminar esto primero para simplificar el CSS de su icono individual. Puede convertirlo en una regla separada o incluir el estilo en cada regla de icono individual (en el siguiente paso).</p>
+        <p><code>  /* Step 1: Common Properties<br>
+            These styles are required to make icons render reliably */<br>
+            .icon::before {<br>
+            &nbspdisplay: inline-block;<br>
+            &nbsptext-rendering: auto;<br>
+            &nbsp-webkit-font-smoothing: antialiased;<br>
+            }
+          </code></p>
+    </div>
+</body>
+</html>
