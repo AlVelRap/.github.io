@@ -60,6 +60,234 @@
             &nbsp-webkit-font-smoothing: antialiased;<br>
             }
           </code></p>
+          <h2>Iconos individuales de referencia <a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/pseudo-elements#_2-reference-individual-icons"><i class="fa-solid fa-link"></i></a></h2>
+          <p>Hay algunos elementos importantes que se deben incluir al hacer referencia a cualquier icono individual:
+            <ul>
+                <li>Configure el pseudoelemento para que coincida con el <code>::before</code> o <code>::after</code> que usó en el paso de configuración común anterior.</li>
+                <li>Establezca la fontpropiedad CSS en la propiedad personalizada CSS correcta (consulte la tabla de familia a continuación). Pero ten en cuenta que los Duotonos necesitan un tratamiento especial .</li>
+                <li>Establezca el contenido en el valor Unicode de uno de nuestros iconos .</li>
+            </ul>
+            <p><code> /* Step 1: Common Properties: All required to make icons render reliably - we did this above but it's included here for the full demo */
+                .icon::before {<br>
+                    &nbspdisplay: inline-block;<br>
+                    &nbsptext-rendering: auto;<br>
+                    &nbsp-webkit-font-smoothing: antialiased;<br>
+                }
+            </code></p>
+            <p><code> /* Step 2: Reference Individual Icons */<br>
+                /* Note: Make sure to include the correct weight and Unicode value for the icon */</code></p>
+            <p><code>/* an example rule targeting any element with the "account" class to render fa-user icon in the Solid style */{<br>
+                .account::before {<br>
+                    &nbspfont: var(--fa-font-solid);<br>
+                    &nbspcontent: "\f007";<br>
+                }</code></p>
+            <p><code>/* an example rule targeting any element with the "warning" class to render fa-triangle-exclamation icon in the Regular style */{<br>
+                .warning::before {{<br>
+                    &nbspfont: var(--fa-font-regular);{<br>
+                    &nbspcontent: "\f071";{<br>
+                }</code></p>
+            <p><code>/* an example rule targeting any element with the "updates" class to render fa-newspaper icon in the Light style */<br>
+                .updates::before {<br>
+                    &nbspfont: var(--fa-font-light);<br>
+                    &nbspcontent: "\f1ea";<br>
+                }</code></p>
+            <p><code>/* an example rule targeting any element with the "delete" class to render fa-trash icon in the Sharp Solid style */<br>
+                .delete::before {<br>
+                    &nbspfont: var(--fa-font-sharp-solid);<br>
+                    &nbspcontent: "\f1f8";<br>
+                }</code></p>
+            <p><code>/* an example rule targeting any element with the "gaming" class to render fa-discord Brand icon */<br>
+                .gaming::before {<br>
+                    &nbspfont: var(--fa-font-brands);<br>
+                    &nbspcontent: "\f392";<br>
+                }</code></p>
+    </div>
+    <div>
+        <h2>SVG<a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/svg-sprites"><i class="fa-solid fa-link"></i></a></h2>
+        <h2>Agregar iconos <a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/svg-sprites#add-icons"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Para agregar íconos desde un archivo sprite, siga estos pasos:</p>
+        <ol>
+            <li>Tome el archivo sprite para el estilo o estilos que desea usar</li>
+            <li>Coloque este archivo con el resto de sus archivos estáticos, como CSS o imágenes, en su proyecto.</li>
+            <li>En el <code>body</code> de su documento, llame al ícono individual por su nombre en el archivo de sprite para el estilo que desea usar. ¡Asegúrate de que la ruta apunte correctamente a donde colocaste los archivos de sprites y que estén alojados en el mismo servidor !</li>
+        </ol>
+        <p>Aquí hay algunos ejemplos de cómo puede llamar iconos en una variedad de estilos:</p>
+        <p><code>
+            &ltheader><br>
+            &nbsp&ltul><br>
+            &nbsp&nbsp&ltli><br>
+            &nbsp&nbsp&nbsp&lt!-- referencing a solid style icon --><br>
+            &nbsp&nbsp&nbsp&ltsvg><br>
+            &nbsp&nbsp&nbsp&nbsp&ltuse xlink:href="/your-path-to-fontawesome/sprites/solid.svg#saxophone-fire">&lt/use><br>
+            &nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&ltli><br>
+            &nbsp&nbsp&nbsp&lt!-- referencing a thin style icon --><br>
+            &nbsp&nbsp&nbsp&ltsvg><br>
+            &nbsp&nbsp&nbsp&nbsp&ltuse xlink:href="/your-path-to-fontawesome/sprites/thin.svg#trumpet">&lt/use><br>
+            &nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&lt/!-- referencing a sharp family's solid style icon  --><br>
+            &nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&lt/use xlink:href="/your-path-to-fontawesome/sprites/sharp-solid.svg#piano-keyboard">&lt/use><br>
+            &nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&nbsp&lt/a href="https://facebook.com/fontawesome"><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/!-- referencing a brands family icon  --><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&lt/use xlink:href="/your-path-to-fontawesome/sprites/fa-brands.svg#facebook">&lt/use><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&lt/a><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&nbsp&lt/a href="https://twitter.com/fontawesome"><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/!-- referencing a brands family icon  --><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&lt/use xlink:href="/your-path-to-fontawesome/sprites/fa-brands.svg#twitter">&lt/use><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&lt/a><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&nbsp&lt/a href="https://github.com/FortAwesome/Font-Awesome"><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/!-- referencing a brands family icon  --><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&lt/use xlink:href="/your-path-to-fontawesome/sprites/fa-brands.svg#github">&lt/use><br>
+            &nbsp&nbsp&nbsp&nbsp&lt/svg><br>
+            &nbsp&nbsp&nbsp&lt/a><br>
+            &nbsp&nbsp&lt/li><br>
+            &nbsp&nbsp&lt/ul><br>
+            &lt/header><br>
+        </code></p>
+
+        <h2>Agregar iconos como Unicodes <a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/svg-unicodes#add-icons-as-unicodes"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Puede agregar íconos en cualquier estilo como unicodes cuando usa el método SVG+JS. Simplemente agregue la clase para el estilo que desea usar para seleccionar el estilo del ícono, luego inserte el valor Unicode, &#xantes y ;después del Unicode, entre el elemento de apertura y cierre <code>&lti></code>.</p>
+        <p>Aquí hay unos ejemplos:</p>
+        <table>
+            <tr><td><i class="fa-solid fa-2x">&#x42;</i>
+                <i class="fa-regular fa-2x fa-spin">&#xf118;</i>
+                <i class="fa-regular fa-2x fa-shake">&#xf118;</i>
+                <i class="fa-light fa-2x">&#x31;</i>
+                <i class="fa-sharp fa-solid fa-2x">&#x21;</i></td></tr>
+                <tr><td><code>
+                    &lti class="fa-solid fa-2x">&amp#x42;&lt/i><br>
+                    &lti class="fa-regular fa-2x fa-spin">&amp#xf118;&lt/i><br>
+                    &lti class="fa-regular fa-2x fa-shake">&amp#xf118;&lt/i><br>
+                    &lti class="fa-light fa-2x">&amp#x31;&lt/i><br>
+                    &lti class="fa-sharp fa-solid fa-2x">&amp#x21;&lt/i>
+            </code></td></tr>
+        </table>
+        <h2>¿Dónde encuentro el Unicode de un icono? <a class="icono-link" href="https://fontawesome.com/docs/web/add-icons/svg-unicodes#where-do-i-find-an-icon-s-unicode"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Cuando busque íconos, simplemente haga clic en el ícono de su elección y el valor Unicode se mostrará sobre el bloque de código que muestra cómo se puede usar el ícono.</p>
+        <img src="./static/web-unicodes-1.9b45eab3.png">
+    </div>
+    <div>
+        <h2>Conceptos básicos de estilo <a class="icono-link" href="https://fontawesome.com/docs/web/style/basics"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Los íconos de Font Awesome heredan automáticamente el tamaño y el color de CSS (como se ve en los ejemplos a continuación). Esto significa que se mezclan con el texto en línea donde sea que los coloque. Font Awesome trata de no ser demasiado obstinado y establece solo los íconos de reglas de estilo básicas necesarias para representar correctamente en contexto.</p>
+        <table>
+            <tr><td>  <span style="font-size: 3em; color: Tomato;">
+                <i class="fa-solid fa-camera"></i>
+              </span>
+            
+              <span style="font-size: 48px; color: Dodgerblue;">
+                <i class="fa-solid fa-camera"></i>
+              </span>
+            
+              <span style="font-size: 3rem;">
+                <span style="color: Mediumslateblue;">
+                <i class="fa-solid fa-camera"></i>
+                </span>
+              </span></td></tr>
+            <tr><td><code>  
+                &ltspan style="font-size: 3em; color: Tomato;">
+                &lti class="fa-solid fa-camera">&lt/i>
+              &lt/span>
+            
+              &ltspan style="font-size: 48px; color: Dodgerblue;">
+                &lti class="fa-solid fa-camera">&lt/i>
+              &lt/span>
+            
+              &ltspan style="font-size: 3rem;">
+                &ltspan style="color: Mediumslateblue;">
+                &lti class="fa-solid fa-camera">&lt/i>
+                &lt/span>
+              &lt/span>
+            </code></td></tr>
+        </table>
+        <h2>Opciones de estilo adicionales <a class="icono-link" href="https://fontawesome.com/docs/web/style/basics#additional-styling-options"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Si bien incorporar íconos a su proyecto es sencillo, también proporcionamos utilidades de estilo adicionales para cosas como cambiar el tamaño de los íconos, alinear y usar íconos en una lista, así como rotar, transformar y animar íconos para que pueda hacer que sus íconos sean impresionantes.</p>
+        <p>También puede agregar su propio estilo personalizado a los íconos de Font Awesome agregando sus propias reglas CSS en el código de su proyecto. Todo lo que normalmente puede controlar con CSS está disponible, desde el color hasta la visualización y la alineación.</p>
+        
+        <h2>Tamaño relativo <a class="icono-link" href="https://fontawesome.com/docs/web/style/size#relative-sizing"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Font Awesome incluye una variedad de tamaños basados ​​en camisetas que no solo aumentan o disminuyen el tamaño de un ícono, sino que también ayudan a alinear verticalmente un ícono con el texto y los elementos que lo rodean (por ejemplo, relleno de botones). Esto es excelente para aumentar/disminuir el tamaño de un ícono mientras se mantiene la legibilidad y la alineación junto con los elementos de la interfaz de usuario.</p>
+        <table>
+            <tr><td>  <p><i class="fa-solid fa-coffee fa-2xs"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+                <p><i class="fa-solid fa-coffee fa-xs"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+                <p><i class="fa-solid fa-coffee fa-sm"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+                <p><i class="fa-solid fa-coffee"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+                <p><i class="fa-solid fa-coffee fa-lg"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+                <p><i class="fa-solid fa-coffee fa-xl"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+                <p><i class="fa-solid fa-coffee fa-2xl"></i> When my six o’clock alarm buzzes, I require a pot of good java.</p>
+              </td></tr>
+            <tr><td><code>
+                &ltp>&lti class="fa-solid fa-coffee fa-2xs">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+                &ltp>&lti class="fa-solid fa-coffee fa-xs">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+                &ltp>&lti class="fa-solid fa-coffee fa-sm">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+                &ltp>&lti class="fa-solid fa-coffee">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+                &ltp>&lti class="fa-solid fa-coffee fa-lg">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+                &ltp>&lti class="fa-solid fa-coffee fa-xl">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+                &ltp>&lti class="fa-solid fa-coffee fa-2xl">&lt/i> When my six o’clock alarm buzzes, I require a pot of good java.&lt/p><br>
+              
+            </code></td></tr>
+        </table>
+        <p>Al igual que los íconos de Font Awesome, la escala de tamaño relativo se crea teniendo font-sizeen cuenta los 16 píxeles predeterminados de los navegadores modernos y crea pasos hacia arriba o hacia abajo a partir de ahí.</p>
+
+        <h2>Tamaño literal <a class="icono-link" href="https://fontawesome.com/docs/web/style/size#literal-sizing"><i class="fa-solid fa-link"></i></a></h2>
+        <p>Font Awesome también incluye una escala de tamaño literal para que aumentar el tamaño de un ícono sea 1xfácil 10xy eficiente. El tamaño literal es útil para cambiar el tamaño de los iconos a una escala mayor o en los casos en que la alineación del texto no es una preocupación principal.</p>
+        <table>
+            <tr><td>  <i class="fa-solid fa-camera fa-1x"></i>
+                <i class="fa-solid fa-camera fa-2x"></i>
+                <i class="fa-solid fa-camera fa-3x"></i>
+                <i class="fa-solid fa-camera fa-4x"></i>
+                <i class="fa-solid fa-camera fa-5x"></i>
+                <i class="fa-solid fa-camera fa-6x"></i>
+                <i class="fa-solid fa-camera fa-7x"></i>
+                <i class="fa-solid fa-camera fa-8x"></i>
+                <i class="fa-solid fa-camera fa-9x"></i>
+                <i class="fa-solid fa-camera fa-10x"></i>
+              </td></tr>
+            <tr><td><code>
+                &lti class="fa-solid fa-camera fa-1x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-2x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-3x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-4x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-5x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-6x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-7x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-8x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-9x">&lt/i><br>
+                &lti class="fa-solid fa-camera fa-10x">&lt/i>              
+            </code></td></tr>
+        </table>
+        <p>Cuando la alineación del texto y el tamaño de los íconos son importantes para su diseño, también tiene opciones para eso.</p>
+        <table>
+            <tr><td>    <div style="text-align: center;">
+                <i class="fa-solid fa-coffee fa-5x"></i>
+                <h4 style="margin-top: 0.25em;">Coffee</h4>
+                <p>"It is inhumane, in <a href="https://www.washingtonpost.com/archive/lifestyle/magazine/1997/11/09/grounds-for-suspicion/075c7cfe-d5cf-4443-ae42-a95e6e46fed7/">my opinion</a>, to force people who have a genuine medical need for coffee to wait in line behind people who apparently view it as some kind of recreational activity."</p>  
+              </div>
+            
+              </td></tr>
+            <tr><td><code>
+                &ltdiv style="text-align: center;"><br>
+                    &nbsp;&lti class="fa-solid fa-coffee fa-5x">&lt/i><br>
+                    &nbsp;&lth4 style="margin-top: 0.25em;">Coffee&lt/h4><br>
+                    &nbsp;&ltp>"It is inhumane, in &lta href="https://www.washingtonpost.com/archive/lifestyle/magazine/1997/11/09/grounds-for-suspicion/075c7cfe-d5cf-4443-ae42-a95e6e46fed7/">my opinion&lt/a>, to force people who have a genuine medical need for coffee to wait in line behind people who apparently view it as some kind of recreational activity."&lt/p>  <br>
+                  &lt/div>
+                             
+            </code></td></tr>
+        </table>
     </div>
 </body>
 </html>
