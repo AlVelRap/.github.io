@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prueba Iconos de Material design</title>
+    <meta charset="UTF-8" />
+    <link href="./static/style.css" rel="stylesheet" type="text/css">
+    <style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            /* src: url(../font/MaterialIconsOutlined-Regular.otf);
+            src: url(../font/MaterialIconsRound-Regular.otf);
+            src: url(../font/MaterialIconsSharp-Regular.otf);
+            src: url(../font/MaterialIconsTwoTone-Regular.otf); */
+            src: url(../font/MaterialIcons-Regular.ttf); /*(https://example.com/MaterialIcons-Regular.eot);*/ /* For IE6-8 */
+            src: local('Material Icons'),
+                local('MaterialIcons-Regular'),
+                /* url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+                url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+                url(https://example.com/MaterialIcons-Regular.ttf) format('truetype'); */
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+        .material-icons.md-50 { font-size: 50px; }
+        .material-icons.md-coloreado{
+            background-color:#334237;
+            color: #76ff03;;
+        }
+        .material-icons.md-coloreado:hover{
+            background-color: #5d6d61;
+            color: #b0ff57
+        }
+            
+    </style>
+</head>
+
+<body>
+<h1>Práctica de uso de iconos con fuentes descargadas en localmente</h1>
+<div>
+    <h2>URL de interes</h2>
+    <a href="https://github.com/google/material-design-icons/tree/master/font" target="_blank">Link a GitHub</a>
+    <a href="https://fonts.google.com/icons?selected=Material+Icons&icon.platform=web&icon.style=Two+tone" target="_blank">Link a los Iconos</a>
+    
+    <h2>Como instanciarlo</h2>
+    <p>Hay que añadir en una etiqueta Style:</p>
+    <p><code>
+        &lt;style><br>
+        &nbsp;@font-face {<br>
+            &nbsp;&nbsp;font-family: 'Material Icons';<br>
+            &nbsp;&nbsp;font-style: normal;<br>
+            &nbsp;&nbsp;font-weight: 400;<br>
+            &nbsp;&nbsp;src: url(../font/MaterialIcons-Regular.ttf);<br>
+            &nbsp;&nbsp;src: local('Material Icons'),<br>
+            &nbsp;&nbsp;&nbsp;local('MaterialIcons-Regular'),<br>
+        &nbsp;}
+        &lt;/style>
+    </code></p>
+    <p>Tambien hay que añadir:</p>
+    <p><code>
+        .material-icons {<br>
+            &nbsp;font-family: 'Material Icons';<br>
+            &nbsp;font-weight: normal;<br>
+            &nbsp;font-style: normal;<br>
+            &nbsp;font-size: 24px;  /* Preferred icon size */<br>
+            &nbsp;display: inline-block;<br>
+            &nbsp;line-height: 1;<br>
+            &nbsp;text-transform: none;<br>
+            &nbsp;letter-spacing: normal;<br>
+            &nbsp;word-wrap: normal;<br>
+            &nbsp;white-space: nowrap;<br>
+            &nbsp;direction: ltr;<br>
+            <br>
+            &nbsp;/* Support for all WebKit browsers. */<br>
+            &nbsp;-webkit-font-smoothing: antialiased;<br>
+            &nbsp;/* Support for Safari and Chrome. */<br>
+            &nbsp;text-rendering: optimizeLegibility;<br>
+            <br>
+            &nbsp;/* Support for Firefox. */<br>
+            &nbsp;-moz-osx-font-smoothing: grayscale;<br>
+            <br>
+            &nbsp;/* Support for IE. */<br>
+            &nbsp;font-feature-settings: 'liga';<br>
+        }
+    </code></p>
+    
+    <h2>Ejemplo Icono simple</h2>
+
+    <span class="material-icons">face</span>
+    <h2>Botón</h2>
+    <!-- <h3>Código</h3> -->
+    <p><button>
+        <span class="material-icons">face</span>
+    </button>     <code>&lt;span class="material-icons">face&lt;/span></code></p>
+    <h2>Lista con Hipervinculos</h2>
+    <ul>
+        <li><a href="" target=""><span class="material-icons">face</span></a><code>&lt;span class="material-icons">face&lt;/span></code></li>
+        <li><a href="" target=""><span class="material-icons">house</span></a><code>&lt;span class="material-icons">house&lt;/span></code></li>
+        <li><a href="" target=""><span class="material-icons">settings</span></a><code>&lt;span class="material-icons">settings&lt;/span></code></li>
+        <li><a href="" target=""><span class="material-icons">accessibility_new</span></a><code>&lt;span class="material-icons">accessibility_new&lt;/span></code></li>
+    </ul>
+    <h2>Ejemplo Icono de modificando el tamaño</h2>
+        <p><span class="material-icons md-50">face</span></p>
+        <code>&lt;span class="material-icons md-50">face&lt;/span></code>
+        <p>Tenemos que crear nuestra propia clase en CSS.</p>
+        <code>
+            .material-icons.md-50 { font-size: 50px; }<br>
+        </code>
+    <h2>Ejemplo Icono de modificando el color</h2>
+        <p><span class="material-icons md-coloreado">face</span></p>
+        <code>&lt;span class="material-icons md-coloreado">face&lt;/span></code>
+        <p>Tenemos que crear nuestra propia clase en CSS.</p>
+        <code>
+            .material-icons.md-coloreado{<br>
+            &nbsp;&nbsp;background-color: #5d6d61;<br>
+            &nbsp;&nbsp;color: #b0ff57<br>
+            }<br>
+        </code>
+</div>
+
+
+    <!-- <a href="#" target="_parent"><span class="material-icons md-50">face</span></a>
+    <a href="#" target="_parent"><span class="material-icons">home</span></a>
+    <button>
+        <span class="material-icons">search</span>
+    </button>
+    <button>
+        <span class="material-icons">calendar_today</span>
+    </button> -->
+
+</body>
+
+</html>
