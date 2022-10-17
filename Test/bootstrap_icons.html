@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iconos de FontAwesome</title>
+    <meta charset="UTF-8" />
+    <link href="./static/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/45614cee74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <h1>Iconos de Bootstrap</h1>
+    </header>
+    <div>
+        <h2>URL fuentes de Bootstrap</h2>
+        <a class="boton" href="https://www.tutorialrepublic.com/bootstrap-icons-classes.php" target="_blank">Link a los
+            iconos <i class="fa-solid fa-link"></i></a>
+        <a class="boton" href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php"
+            target="_blank">Link a las instrucciones <i class="fa-solid fa-link"></i></a>
+
+        <h2>Como empezar</h2>
+        <p>La forma más sencilla de incluir iconos de Bootstrap en una página web es mediante el enlace CDN. Este enlace
+            CDN básicamente apunta a un archivo CSS remoto que incluye todas las clases necesarias para generar iconos
+            de fuentes.</p>
+        <p>Puede incluir iconos de Bootstrap en una plantilla de Bootstrap, así como en una página web simple sin usar
+            el marco de Bootstrap. Echemos un vistazo al siguiente ejemplo:</p>
+        <p><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"></code>
+        </p>
+
+        <h2>Como instanciar un icono</h2>
+        <p>Para usar íconos de Bootstrap en su código, necesitará una <i>etiqueta con una clase <code>.bi-*</code> de
+                ícono individual aplicada. La sintaxis general para usar iconos de Bootstrap es:</p>
+        <table>
+            <tr>
+                <td><i class="bi-globe "></i></td>
+                <td><code>&lt;i class="bi -class-name ">&lt;/i></code></td>
+            </tr>
+        </table>
+        <p>Donde class-name es el nombre de la clase de icono en particular, por ejemplo search, person, calendar, star,
+            , globe, facebook, twitter, etc. Vea la lista de todas las clases de iconos de Bootstrap .</p>
+        <p>Por ejemplo, para colocar el ícono de búsqueda dentro de un botón, podría hacer algo como esto:</p>
+        <p><code>
+                &lt;button type="submit" class="btn btn-primary">
+                &lt;span class="bi-search">&lt;/span> Search&lt;/button>
+            </code>
+        </p>
+        <p>
+            <code>
+                &lt;button type="submit" class="btn btn-secondary">
+                &lt;span class="bi-search">&lt;/span> Search&lt;/button>
+            </code>
+        </p>
+
+        <p>— El resultado del ejemplo anterior se verá así:</p>
+        <button type="submit" class="btn btn-primary"><span class="bi-search"></span> Search</button>
+        <button type="submit" class="btn btn-secondary"><span class="bi-search"></span> Search</button>
+        <p>Del mismo modo, puede colocar iconos dentro de los navegadores, formularios, tablas, párrafos o en cualquier
+            lugar que desee. En el próximo capítulo, verá cómo utilizar estos iconos en los componentes de navegación de
+            Bootstrap .</p>
+        <p>Nota: Recuerde dejar un espacio después de la etiqueta de cierre del elemento del ícono (es decir, después
+            </i>de la etiqueta), cuando use los íconos junto con las cadenas de texto, como botones internos o enlaces
+            de navegación, para asegurarse de que haya un espacio adecuado entre el ícono y el texto.</p>
+    </div>
+    <div>
+        <h2>Uso de iconos de Font Awesome en Bootstrap</h2>
+        <p>También puede utilizar bibliotecas de iconos externos en Bootstrap. Una de las bibliotecas de iconos externos
+            más populares y altamente compatibles para Bootstrap es Font Awesome. Proporciona más de 675 íconos que
+            están disponibles en SVG, PNG, así como en formato de fuente web para una mejor usabilidad y escalabilidad.
+        </p>
+        <p>Simplemente puede usar el enlace CDN de font-awesome disponible gratuitamente para incluirlo en su proyecto.
+            Echemos un vistazo al siguiente ejemplo para entender cómo funciona básicamente:</p>
+        <table>
+            <tr>
+                <td>
+                    <h1><i class="fa fa-globe"></i> Hello, world!</h1>
+                </td>
+                <td>
+                    <p><code>&lt;h1>&lt;i class="fa fa-globe">&lt;/i> Hello, world!&lt;/h1></code></p>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Cómo usar iconos de Font Awesome en su código</h2>
+        <p>Para usar íconos de Font Awesome en su código, necesitará una <i>etiqueta junto con una clase base .fay una clase de ícono individual .fa-*. La sintaxis general para usar íconos de fuentes increíbles es:</p>
+        <p><code>&lt;i class="fa fa- nombre-clase ">&lt;/i></code></p>
+        <p>Donde class-name es el nombre de la clase de icono en particular, por ejemplo search, user, calendar, star, , globe, facebook, twitter, etc. Vea la lista de todas las clases de iconos de Font Awesome.</p>
+        <p>Por ejemplo, puede colocar un icono de búsqueda de fuente impresionante dentro de un botón como este:</p>
+        <p><code>&lt;button type="submit" class="btn btn-primary">&lt;span class="fa fa-search">&lt;/span> Search&lt;/button></code></p>
+        <p><code>&lt;button type="submit" class="btn btn-secondary">&lt;span class="fa fa-search">&lt;/span> Search&lt;/button></code></p>
+        <p>— El resultado del ejemplo anterior se verá así:</p>
+        <button type="submit" class="btn btn-primary"><span class="fa fa-search"></span> Search</button>
+        <button type="submit" class="btn btn-secondary"><span class="fa fa-search"></span> Search</button>
+        <p>Del mismo modo, puede colocar íconos de Font Awesome dentro de los navegadores, formularios, tablas, párrafos y otros componentes de la misma manera que lo hace con los íconos de Bootstrap.</p>
+
+    </div>
+</body>
+
+</html>
