@@ -3,60 +3,68 @@ window.onload = () => {
     let angleZ = -1 //grados
     let angleY = 1 //grados
     let angleX = 1 //grados
+
+    let max = 5
+    let min = -5
+    let dispX = Math.random() * (max - min + 1) + min
+    let dispY = Math.random() * (max - min + 1) + min
+    let dispZ = Math.random() * (max - min + 1) + min
+    let translationVector = [dispX, dispY, dispZ]
+
     let vertex = [
-        [300,   500,    500,    300,   500,    500,    300,     300],
-        [300,   300,    500,    500,   300,    500,    300,     500],
-        [100,   100,    100,    100,   -100,   -100,   -100,    -100]
+        [300, 500, 500, 300, 500, 500, 300, 300],
+        [300, 300, 500, 500, 300, 500, 300, 500],
+        [100, 100, 100, 100, -100, -100, -100, -100]
     ]
 
     let edges = [
         { // 0
-            "point1":[vertex[0][0],vertex[1][0],vertex[2][0]],
-            "point2":[vertex[0][1],vertex[1][1],vertex[2][1]]
+            "point1": [vertex[0][0], vertex[1][0], vertex[2][0]],
+            "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
         },
         { // 1
-            "point1":[vertex[0][1],vertex[1][1],vertex[2][1]],
-            "point2":[vertex[0][2],vertex[1][2],vertex[2][2]]
+            "point1": [vertex[0][1], vertex[1][1], vertex[2][1]],
+            "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
         },
         { // 2
-            "point1":[vertex[0][2],vertex[1][2],vertex[2][2]],
-            "point2":[vertex[0][3],vertex[1][3],vertex[2][3]]
+            "point1": [vertex[0][2], vertex[1][2], vertex[2][2]],
+            "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
         },
         {// 3
-            "point1":[vertex[0][3],vertex[1][3],vertex[2][3]],
-            "point2":[vertex[0][0],vertex[1][0],vertex[2][0]]
+            "point1": [vertex[0][3], vertex[1][3], vertex[2][3]],
+            "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
         },
         {// 4
-            "point1":[vertex[0][0],vertex[1][0],vertex[2][0]],
-            "point2":[vertex[0][6],vertex[1][6],vertex[2][6]]
+            "point1": [vertex[0][0], vertex[1][0], vertex[2][0]],
+            "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
         },
         { // 5
-            "point1":[vertex[0][1],vertex[1][1],vertex[2][1]],
-            "point2":[vertex[0][4],vertex[1][4],vertex[2][4]]
+            "point1": [vertex[0][1], vertex[1][1], vertex[2][1]],
+            "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
         },
         { // 6
-            "point1":[vertex[0][2],vertex[1][2],vertex[2][2]],
-            "point2":[vertex[0][5],vertex[1][5],vertex[2][5]]
+            "point1": [vertex[0][2], vertex[1][2], vertex[2][2]],
+            "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
         },
         {// 7
-            "point1":[vertex[0][3],vertex[1][3],vertex[2][3]],
-            "point2":[vertex[0][7],vertex[1][7],vertex[2][7]]
+            "point1": [vertex[0][3], vertex[1][3], vertex[2][3]],
+            "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
         },
         {// 8
-            "point1":[vertex[0][6],vertex[1][6],vertex[2][6]],
-            "point2":[vertex[0][4],vertex[1][4],vertex[2][4]]
+            "point1": [vertex[0][6], vertex[1][6], vertex[2][6]],
+            "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
         },
         { // 9
-            "point1":[vertex[0][4],vertex[1][4],vertex[2][4]],
-            "point2":[vertex[0][5],vertex[1][5],vertex[2][5]]
+            "point1": [vertex[0][4], vertex[1][4], vertex[2][4]],
+            "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
         },
         { // 10
-            "point1":[vertex[0][5],vertex[1][5],vertex[2][5]],
-            "point2":[vertex[0][7],vertex[1][7],vertex[2][7]]
+            "point1": [vertex[0][5], vertex[1][5], vertex[2][5]],
+            "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
         },
         {// 11
-            "point1":[vertex[0][7],vertex[1][7],vertex[2][7]],
-            "point2":[vertex[0][6],vertex[1][6],vertex[2][6]]
+            "point1": [vertex[0][7], vertex[1][7], vertex[2][7]],
+            "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
         }
     ]
 
@@ -64,7 +72,9 @@ window.onload = () => {
     createPoints(vertex)
     createEdges(edges)
 
-    counter = 0
+    let check1 = 0
+    let check2 = 0
+    let counter = 0
     setInterval(function () {
         // randomize the angle every 50 cicles
         if (counter > 50) {
@@ -74,74 +84,108 @@ window.onload = () => {
             angleZ = Math.random() * (max - min + 1) + min
             angleX = Math.random() * (max - min + 1) + min
             angleY = Math.random() * (max - min + 1) + min
+
+            // dispX = Math.random() * (max - min + 1) + min
+            // dispY = Math.random() * (max - min + 1) + min
+            // dispZ = Math.random() * (max - min + 1) + min
+
+            // translationVector = [dispX, dispY, dispZ]
         } else {
             counter++
         }
+        // translate the vertex's matrix
+        vertex = translate(vertex, translationVector)
+        // We need to check if the new matrix it's out of bundaries (0,0 to 1000,1000)
+        const condition1 = (element) => element <= 0
+        const condition2 = (element) => element >= 1000
+        if(vertex[0].some(condition1) | vertex[0].some(condition2)){// in the x Axis
+            if(check1 >= 30){
+                translationVector[0] = -translationVector[0]
+                check1 = 0
+            }else{
+                check1++
+            }
+        }else{
+            check1 = 30
+        } 
+        if(vertex[1].some(condition1) | vertex[1].some(condition2)){// in the y Axis
+            if(check2 >= 30){
+                translationVector[1] = -translationVector[1]
+                check2 = 0
+            }else{
+                check2++
+            }
+        }else{
+            check2 = 30
+        }
+
+        // Get the new center
+        centerPos = getCenter(vertex)
         // rotate the vertex's matrix
-        vertex = rotate(vertex,centerPos,angleZ, angleY, angleX)
-        
+        vertex = rotate(vertex, centerPos, angleZ, angleY, angleX)
+
         // recalculate the edges
         edges = [
             { // 0
-                "point1":[vertex[0][0],vertex[1][0],vertex[2][0]],
-                "point2":[vertex[0][1],vertex[1][1],vertex[2][1]]
+                "point1": [vertex[0][0], vertex[1][0], vertex[2][0]],
+                "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
             },
             { // 1
-                "point1":[vertex[0][1],vertex[1][1],vertex[2][1]],
-                "point2":[vertex[0][2],vertex[1][2],vertex[2][2]]
+                "point1": [vertex[0][1], vertex[1][1], vertex[2][1]],
+                "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
             },
             { // 2
-                "point1":[vertex[0][2],vertex[1][2],vertex[2][2]],
-                "point2":[vertex[0][3],vertex[1][3],vertex[2][3]]
+                "point1": [vertex[0][2], vertex[1][2], vertex[2][2]],
+                "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
             },
             {// 3
-                "point1":[vertex[0][3],vertex[1][3],vertex[2][3]],
-                "point2":[vertex[0][0],vertex[1][0],vertex[2][0]]
+                "point1": [vertex[0][3], vertex[1][3], vertex[2][3]],
+                "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
             },
             {// 4
-                "point1":[vertex[0][0],vertex[1][0],vertex[2][0]],
-                "point2":[vertex[0][6],vertex[1][6],vertex[2][6]]
+                "point1": [vertex[0][0], vertex[1][0], vertex[2][0]],
+                "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
             },
             { // 5
-                "point1":[vertex[0][1],vertex[1][1],vertex[2][1]],
-                "point2":[vertex[0][4],vertex[1][4],vertex[2][4]]
+                "point1": [vertex[0][1], vertex[1][1], vertex[2][1]],
+                "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
             },
             { // 6
-                "point1":[vertex[0][2],vertex[1][2],vertex[2][2]],
-                "point2":[vertex[0][5],vertex[1][5],vertex[2][5]]
+                "point1": [vertex[0][2], vertex[1][2], vertex[2][2]],
+                "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
             },
             {// 7
-                "point1":[vertex[0][3],vertex[1][3],vertex[2][3]],
-                "point2":[vertex[0][7],vertex[1][7],vertex[2][7]]
+                "point1": [vertex[0][3], vertex[1][3], vertex[2][3]],
+                "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
             },
             {// 8
-                "point1":[vertex[0][6],vertex[1][6],vertex[2][6]],
-                "point2":[vertex[0][4],vertex[1][4],vertex[2][4]]
+                "point1": [vertex[0][6], vertex[1][6], vertex[2][6]],
+                "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
             },
             { // 9
-                "point1":[vertex[0][4],vertex[1][4],vertex[2][4]],
-                "point2":[vertex[0][5],vertex[1][5],vertex[2][5]]
+                "point1": [vertex[0][4], vertex[1][4], vertex[2][4]],
+                "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
             },
             { // 10
-                "point1":[vertex[0][5],vertex[1][5],vertex[2][5]],
-                "point2":[vertex[0][7],vertex[1][7],vertex[2][7]]
+                "point1": [vertex[0][5], vertex[1][5], vertex[2][5]],
+                "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
             },
             {// 11
-                "point1":[vertex[0][7],vertex[1][7],vertex[2][7]],
-                "point2":[vertex[0][6],vertex[1][6],vertex[2][6]]
+                "point1": [vertex[0][7], vertex[1][7], vertex[2][7]],
+                "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
             }
         ]
 
         // redraw the vertex
-        vertex[0].forEach((row,i)=>{
-            let point = document.querySelector("#vertex"+i)
+        vertex[0].forEach((row, i) => {
+            let point = document.querySelector("#vertex" + i)
             point.cx.baseVal.value = Math.floor(row)
             point.cy.baseVal.value = Math.floor(vertex[1][i])
         })
 
         // redraw the edges
-        edges.forEach((object,i) =>{
-            let line = document.querySelector("#edge"+i)
+        edges.forEach((object, i) => {
+            let line = document.querySelector("#edge" + i)
             line.x1.baseVal.value = Math.floor(object.point1[0])
             line.y1.baseVal.value = Math.floor(object.point1[1])
             line.x2.baseVal.value = Math.floor(object.point2[0])
@@ -150,39 +194,39 @@ window.onload = () => {
     }, 30)
 }
 
-function getCenter(vertex){
+function getCenter(vertex) {
     let result = []
-    vertex.forEach(row=>{
+    vertex.forEach(row => {
         let counter = 0
         let cosa = 0
-        row.forEach(col =>{
+        row.forEach(col => {
             cosa += parseFloat(col)
             counter++
         })
-        result.push(parseFloat(cosa/counter))
+        result.push(parseFloat(cosa / counter))
     })
     return result
 }
 
-function createPoints(vertex){
+function createPoints(vertex) {
     const svgns = "http://www.w3.org/2000/svg"
-    vertex[0].forEach((row,i) =>{
-        let point = document.createElementNS(svgns,"circle")
-        point.id = "vertex"+i
+    vertex[0].forEach((row, i) => {
+        let point = document.createElementNS(svgns, "circle")
+        point.id = "vertex" + i
         point.cx.baseVal.value = Math.floor(row)
         point.cy.baseVal.value = Math.floor(vertex[1][i])
         point.r.baseVal.value = 5
         point.style.fill = "green"
         document.querySelector("svg").appendChild(point)
     })
-    
+
 }
 
-function createEdges(edges){
+function createEdges(edges) {
     const svgns = "http://www.w3.org/2000/svg"
-    edges.forEach((object,i) =>{
-        let line = document.createElementNS(svgns,"line")
-        line.id = "edge"+i
+    edges.forEach((object, i) => {
+        let line = document.createElementNS(svgns, "line")
+        line.id = "edge" + i
         line.x1.baseVal.value = Math.floor(object.point1[0])
         line.y1.baseVal.value = Math.floor(object.point1[1])
         line.x2.baseVal.value = Math.floor(object.point2[0])
@@ -190,27 +234,27 @@ function createEdges(edges){
         line.style = "stroke:rgb(0,255,0);stroke-width:2"
         document.querySelector("svg").appendChild(line)
     })
-    
+
 }
 
-function scalarProd(matrix1, matrix2){
+function scalarProd(matrix1, matrix2) {
     // we check if it is a vector or a matrix
-    if(typeof(matrix1.length) === 'undefined')
+    if (typeof (matrix1.length) === 'undefined')
         row_m1 = 1
     else
         row_m1 = matrix1.length
-    
-    if(typeof(matrix1[0].length) === 'undefined')
+
+    if (typeof (matrix1[0].length) === 'undefined')
         col_m1 = 1
     else
         col_m1 = matrix1[0].length
 
-    if(typeof(matrix2.length) === 'undefined')
+    if (typeof (matrix2.length) === 'undefined')
         row_m2 = 1
     else
         row_m2 = matrix2.length
-    
-    if(typeof(matrix2[0].length) === 'undefined')
+
+    if (typeof (matrix2[0].length) === 'undefined')
         col_m2 = 1
     else
         col_m2 = matrix2[0].length
@@ -230,15 +274,23 @@ function scalarProd(matrix1, matrix2){
     return result
 }
 
+function translate(vertex, translationVector) {
+    vertex.forEach((row, i) => {
+        row.forEach((coordinate, j) => {
+            vertex[i][j] += parseFloat(translationVector[i])
+        })
+    })
+    return vertex
+}
 
-function rotate(vertex,centerPoint, angleZ, angleY, angleX) {
+function rotate(vertex, centerPoint, angleZ, angleY, angleX) {
     // We need to determine the position according to the rotation center
-    let vectorsToRotate=[]
+    let vectorsToRotate = []
     let array = []
-    vertex.forEach((row,i) => {
+    vertex.forEach((row, i) => {
         array = []
-        row.forEach((coordinate) =>{
-            array.push(parseFloat(coordinate-centerPoint[i]))
+        row.forEach((coordinate) => {
+            array.push(parseFloat(coordinate - centerPoint[i]))
         })
         vectorsToRotate.push(array)
     });
@@ -267,14 +319,14 @@ function rotate(vertex,centerPoint, angleZ, angleY, angleX) {
     ]
 
     // Creation of the final rotation matrix
-    const rotationXYZ = scalarProd(rotationX,scalarProd(rotationZ,rotationY))
+    const rotationXYZ = scalarProd(rotationX, scalarProd(rotationZ, rotationY))
 
     // Rotation of all the vertex
-    let result = scalarProd(rotationXYZ,vectorsToRotate)
+    let result = scalarProd(rotationXYZ, vectorsToRotate)
 
     // we have to translate each vector to the original position
-    result.forEach((row,i) => {
-        row.forEach((coordinate,j) =>{
+    result.forEach((row, i) => {
+        row.forEach((coordinate, j) => {
             result[i][j] += parseFloat(centerPoint[i])
         })
     })
