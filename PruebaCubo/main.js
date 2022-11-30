@@ -4,6 +4,11 @@ window.onload = () => {
     let angleY = 1 //grados
     let angleX = 1 //grados
 
+    let svg = document.querySelector("svg")
+
+    let infLimit = svg.viewBox.baseVal.x
+    let supLimit = svg.width.baseVal.value
+
     let max = 5
     let min = -5
     let dispX = Math.random() * (max - min + 1) + min
@@ -198,8 +203,9 @@ window.onload = () => {
         // translate the vertex's matrix
         vertex = translate(vertex, translationVector)
         // We need to check if the new matrix it's out of bundaries (0,0 to 1000,1000)
-        const condition1 = (element) => element <= 0
-        const condition2 = (element) => element >= 1000
+        // We check colision y we allow some time to change direction
+        const condition1 = (element) => element <= infLimit
+        const condition2 = (element) => element >= supLimit
         if (vertex[0].some(condition1) | vertex[0].some(condition2)) {// in the x Axis
             if (check1 >= 30) {
                 translationVector[0] = -translationVector[0]
