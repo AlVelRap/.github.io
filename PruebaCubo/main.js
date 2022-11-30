@@ -12,9 +12,9 @@ window.onload = () => {
     let translationVector = [dispX, dispY, dispZ]
 
     let vertex = [
-        [300, 500, 500, 300, 500, 500, 300, 300],
-        [300, 300, 500, 500, 300, 500, 300, 500],
-        [100, 100, 100, 100, -100, -100, -100, -100]
+        [300, 500, 500, 300, 500, 500, 300, 300, 400,400,(100 * Math.tan(Math.PI / 180 * 60)+400),(400-100 * Math.tan(Math.PI / 180 * 60)),400,400],
+        [300, 300, 500, 500, 300, 500, 300, 500, (100 * Math.tan(Math.PI / 180 * 60)+400),(400-100 * Math.tan(Math.PI / 180 * 60)),400,400,400,400],
+        [100, 100, 100, 100, -100, -100, -100, -100, 0,0,0,0,(100 * Math.tan(Math.PI / 180 * 60)),(-100 * Math.tan(Math.PI / 180 * 60))]
     ]
 
     let edges = [
@@ -65,6 +65,108 @@ window.onload = () => {
         {// 11
             "point1": [vertex[0][7], vertex[1][7], vertex[2][7]],
             "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+        },
+        // the piramid on the botton face
+        {// 12
+            "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+            "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
+        },
+        {// 13
+            "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+            "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
+        },
+        {// 14
+            "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+            "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
+        },
+        {// 15
+            "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+            "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
+        },
+        // the piramid on the upper face
+        {// 16
+            "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+            "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
+        },
+        {// 17
+            "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+            "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
+        },
+        {// 18
+            "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+            "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
+        },
+        {// 19
+            "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+            "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+        },
+        // the piramid on the right face
+        {// 20
+            "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+            "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
+        },
+        {// 21
+            "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+            "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
+        },
+        {// 22
+            "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+            "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
+        },
+        {// 23
+            "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+            "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
+        },
+        // the piramid on the left face
+        {// 24
+            "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+            "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
+        },
+        {// 25
+            "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+            "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
+        },
+        {// 26
+            "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+            "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+        },
+        {// 27
+            "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+            "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
+        },
+        // the piramid on the front face
+        {// 20
+            "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+            "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
+        },
+        {// 21
+            "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+            "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
+        },
+        {// 22
+            "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+            "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
+        },
+        {// 23
+            "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+            "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
+        },
+        // the piramid on the back face
+        {// 24
+            "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+            "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
+        },
+        {// 25
+            "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+            "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
+        },
+        {// 26
+            "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+            "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+        },
+        {// 27
+            "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+            "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
         }
     ]
 
@@ -98,24 +200,24 @@ window.onload = () => {
         // We need to check if the new matrix it's out of bundaries (0,0 to 1000,1000)
         const condition1 = (element) => element <= 0
         const condition2 = (element) => element >= 1000
-        if(vertex[0].some(condition1) | vertex[0].some(condition2)){// in the x Axis
-            if(check1 >= 30){
+        if (vertex[0].some(condition1) | vertex[0].some(condition2)) {// in the x Axis
+            if (check1 >= 30) {
                 translationVector[0] = -translationVector[0]
                 check1 = 0
-            }else{
+            } else {
                 check1++
             }
-        }else{
+        } else {
             check1 = 30
-        } 
-        if(vertex[1].some(condition1) | vertex[1].some(condition2)){// in the y Axis
-            if(check2 >= 30){
+        }
+        if (vertex[1].some(condition1) | vertex[1].some(condition2)) {// in the y Axis
+            if (check2 >= 30) {
                 translationVector[1] = -translationVector[1]
                 check2 = 0
-            }else{
+            } else {
                 check2++
             }
-        }else{
+        } else {
             check2 = 30
         }
 
@@ -124,8 +226,7 @@ window.onload = () => {
         // rotate the vertex's matrix
         vertex = rotate(vertex, centerPos, angleZ, angleY, angleX)
 
-        // recalculate the edges
-        edges = [
+        let edges = [
             { // 0
                 "point1": [vertex[0][0], vertex[1][0], vertex[2][0]],
                 "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
@@ -173,6 +274,108 @@ window.onload = () => {
             {// 11
                 "point1": [vertex[0][7], vertex[1][7], vertex[2][7]],
                 "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+            },
+            // the piramid on the botton face
+            {// 12
+                "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+                "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
+            },
+            {// 13
+                "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+                "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
+            },
+            {// 14
+                "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+                "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
+            },
+            {// 15
+                "point1": [vertex[0][8], vertex[1][8], vertex[2][8]],
+                "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
+            },
+            // the piramid on the upper face
+            {// 16
+                "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+                "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
+            },
+            {// 17
+                "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+                "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
+            },
+            {// 18
+                "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+                "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
+            },
+            {// 19
+                "point1": [vertex[0][9], vertex[1][9], vertex[2][9]],
+                "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+            },
+            // the piramid on the right face
+            {// 20
+                "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+                "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
+            },
+            {// 21
+                "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+                "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
+            },
+            {// 22
+                "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+                "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
+            },
+            {// 23
+                "point1": [vertex[0][10], vertex[1][10], vertex[2][10]],
+                "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
+            },
+            // the piramid on the left face
+            {// 24
+                "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+                "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
+            },
+            {// 25
+                "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+                "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
+            },
+            {// 26
+                "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+                "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+            },
+            {// 27
+                "point1": [vertex[0][11], vertex[1][11], vertex[2][11]],
+                "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
+            },
+            // the piramid on the front face
+            {// 20
+                "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+                "point2": [vertex[0][0], vertex[1][0], vertex[2][0]]
+            },
+            {// 21
+                "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+                "point2": [vertex[0][1], vertex[1][1], vertex[2][1]]
+            },
+            {// 22
+                "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+                "point2": [vertex[0][2], vertex[1][2], vertex[2][2]]
+            },
+            {// 23
+                "point1": [vertex[0][12], vertex[1][12], vertex[2][12]],
+                "point2": [vertex[0][3], vertex[1][3], vertex[2][3]]
+            },
+            // the piramid on the back face
+            {// 24
+                "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+                "point2": [vertex[0][4], vertex[1][4], vertex[2][4]]
+            },
+            {// 25
+                "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+                "point2": [vertex[0][5], vertex[1][5], vertex[2][5]]
+            },
+            {// 26
+                "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+                "point2": [vertex[0][6], vertex[1][6], vertex[2][6]]
+            },
+            {// 27
+                "point1": [vertex[0][13], vertex[1][13], vertex[2][13]],
+                "point2": [vertex[0][7], vertex[1][7], vertex[2][7]]
             }
         ]
 
