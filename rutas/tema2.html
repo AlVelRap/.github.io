@@ -10,6 +10,8 @@
     <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
     <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="../static/materialize.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -34,36 +36,57 @@
         </nav>
     </div>
 
-    <div>
-        <p>Uso de estilos</p>
-        <!-- <details> -->
-        <summary>Frameworks</summary>
-        <header>
-            <h3>Teoria</h3>
-        </header>
-        <ul>
-            <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank">Documentación
-                    Bootstrap</a></li>
-            <li><a href="https://materializecss.com/getting-started.html" target="_blank">Documentación Materialize</a>
-            </li>
-        </ul>
-        <header>
-            <h3>Herramientas</h3>
-        </header>
-        <ul>
-            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-            <li><a href="https://materializecss.com/" target="_blank">Materialize</a></li>
-        </ul>
-        <header>
-            <h3>Prácticas</h3>
-        </header>
-        <ul>
-            <li><a href="../bootstrap/album/index.html" target="_blank">Práctica modificar parametros de Bootstrap</a>
-            </li>
-        </ul>
-        <!-- </details> -->
-
-    </div>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><span class="material-symbols-outlined">
+                    expand_more
+                </span>Uso de estilos</div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Frameworks</div>
+                        <div class="collapsible-body">
+                            <header>
+                                <h3>Teoria</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/"
+                                        target="_blank">Documentación Bootstrap</a></li>
+                                <li><a href="https://materializecss.com/getting-started.html"
+                                        target="_blank">Documentación Materialize</a></li>
+                                <li><a href="https://sass-lang.com/documentation/" target="_blank">Documentación
+                                        SASS</a></li>
+                            </ul>
+                            <header>
+                                <h3>Herramientas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                                <li><a href="https://materializecss.com/" target="_blank">Materialize</a></li>
+                                <li><a href="https://nodejs.org/es/" target="_blank">NodeJS (para instalar el gestor de
+                                        paquetes NPM)</a></li>
+                                <li><a href="https://sass-lang.com/" target="_blank">SASS</a></li>
+                            </ul>
+                            <header>
+                                <h3>Prácticas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../bootstrap/album/index.html" target="_blank">Práctica modificar
+                                        parametros de Bootstrap</a>
+                                <li><a href="../materialize-v1.0.0/parallax-template/index.html"
+                                        target="_blank">Práctica modificar
+                                        parametros de Materialize</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    
     <!-- El footer -->
     <footer class="page-footer teal">
         <div class="container">
