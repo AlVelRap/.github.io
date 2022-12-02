@@ -3,160 +3,317 @@
 
 <head>
     <title>Tema 1- Diseño Interfaces</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alberto Velázquez Rapado">
+    <link rel="shortcut icon" href="../static/ies-ribera-de-castilla_icon.png">
     <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
     <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../materialize-v1.0.0/materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="../static/materialize.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <nav class="teal darken-4">
-        <div class="nav-wrapper">
-                <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.jpg" width="30px">Diseño de Interfaces Web</a>
-            <!-- <h1>Diseño de Interfaces Web</h1>
-            <h6>by Alberto Velázquez Rapado</h6> -->
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="./tema0.html">Tema 0</a></li>
-                <li><a class="active" href="./tema1.html">Tema 1</a></li>
-                <li><a href="./tema2.html">Tema 2</a></li>
-                <li><a href="./tema3.html">Tema 3</a></li>
-                <li><a href="./tema4.html">Tema 4</a></li>
-                <li><a href="./tema5.html">Tema 5</a></li>
-                <li><a href="./tema6.html">Tema 6</a></li>
-            </ul>
-        </div>
-        
-    </nav>
-
-    <div class="primera_linea"><a href="https://www.educa.jcyl.es/es" tarjet="_blank">EducaCyl</a></div>
-
-    <div>
-        <p>Planificación de interfaces gráficas</p>
-        <!-- <details> -->
-            <summary>Colores</summary>
-            <header><h3>Teoria</h3></header>
-                <ul>
-                    <li><a href="../PDF/Tema_1_Material_Components_V2.pdf" target="_blank">Componentes de Material</a></li>
-                    <li><a href="../PDF/Tema_1_El_Sistema_de_colores.pdf" target="_blank">Sistema de colores de Material</a></li>
-                    <li><a href="../PDF/Tema_1_Color_Interfaz_Usuario.pdf" target="_blank">Color en la UI de Material</a></li>
-                    <li><a href="https://creativolandia.com/como-elegir-los-colores-para-mi-web/" target="_blank">Como escoger colores para una Web</a></li>
+    <!-- El navBar -->
+    <div class="navbar-fixed">
+        <nav class="teal darken-4">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.png"
+                        width="30px">DINT</a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-link" class="right hide-on-med-and-down">
+                    <li><a href="./tema0.html">Tema 0</a></li>
+                    <li><a class="active" href="./tema1.html">Tema 1</a></li>
+                    <li><a href="./tema2.html">Tema 2</a></li>
+                    <li><a href="./tema3.html">Tema 3</a></li>
+                    <li><a href="./tema4.html">Tema 4</a></li>
+                    <li><a href="./tema5.html">Tema 5</a></li>
+                    <li><a href="./tema6.html">Tema 6</a></li>
                 </ul>
-            <header><h3>Herramientas</h3></header>
-                <ul>
-                    <li><a href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Herramienta color Material</a></li>
-                    <li><a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors" target="_blank">Creador de Paletas Material</a></li>
-                    <li><a href="https://www.colourlovers.com/" tarjet="_blank">Color Lovers</a></li>
-                    <li><a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" tarjet="_blank">Paletton</a></li>
-                    <li><a href="https://www.canva.com/colors/color-wheel/" tarjet="_blank">Canva</a></li>
-                    <li><a href="https://aulacm.com/gama-colores-diseno-grafico-web/" tarjet="_blank">Más Herrramientas</a></li>
-                </ul>
-            <header><h3>Prácticas</h3></header>
-            <ul>
-                <li><a href="../PDF/Tema_1_Color_Tools.pdf" target="_blank">Herramienta de color de Material</a></li>
-                <li><a href="https://material.io/resources/color/#!/?view.left=1&view.right=0&secondary.color=76ff03&primary.color=334237" target="_blank">Esquema de color escogido de Material</a></li>
-                <li><a href="../PDF/Tema_1_Balsamiq.pdf" target="_blank">Aplicando esquema de color a componentes en Balsamiq</a></li>
-            </ul>
-        <!-- </details> -->
-        <!-- <details> -->
-            <summary>Iconos</summary>
-            <header><h3>Teoria</h3></header>
-                <ul>
-                    <li><a href="https://www.w3schools.com/css/css_icons.asp" target="_blank">Como añadir iconos por w3schools</a></li>
-                    <li><a href="https://developers.google.com/fonts/docs/material_icons#icon_font_for_the_web" target="_blank">Guía de iconos de material </a></li>
-                    <li><a href="https://m2.material.io/design/iconography/product-icons.html#design-principles" target="_blank">Principios de diseño de los iconos de Material</a></lI>
-                    <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php" target="_blank">Como usar iconos en Bootstrap</a></li>
-                </ul>
-            <header><h3>Herramientas</h3></header>
-                <ul>
-                    <li><a href="https://m3.material.io/resources/icons" target="_blank">Iconos Material</a></li>
-                    <li><a href="https://fontawesome.com/icons" target="_blank">Iconos FonstAwesome</a></li>
-                    <li><a href="https://www.tutorialrepublic.com/bootstrap-icons-classes.php" target="_blank">Iconos Bootstrap</a></li>
-                </ul>
-            <header><h3>Prácticas</h3></header>
-            <ul>
-                <li><a href="../Test/material_icons.html" target="_blank">Iconos de Material</a></li>
-                <li><a href="../Test/pratica_uso_Iconos_Local.html" target="_blank">Práctica de uso de iconos con fuentes descargadas en localmente</a></li>
-                <li><a href="../Test/fonts_Awesome_Icons.html" target="_blank">Iconos de Font Awesome</a></li>
-                <li><a href="../Test/bootstrap_icons.html" target="_blank">Iconos de Bootstrap</a></li>
-            </ul>
-        <!-- </details> -->
-
-        <!-- <details> -->
-            <summary>Fuentes</summary>
-            <header><h3>Teoria</h3></header>
-                <ul>
-                    <li><a href="../PDF/Tema_1_Fonts.pdf" target="_blank">Instanciar fuentes</a></li>
-                    <li><a href="../PDF/Tema_1_Format_Fonts.pdf" target="_blank">Dar formato a fuentes</a></li>
-                    <li><a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php" target="_blank">Uso de @font-face</a></li>
-                    <li><a href="https://refrescandonegocios.com/tipografias-pagina-web/" target="_blank">Como esocoger fuentes</a></li>
-                    <li><a href="https://m2.material.io/design/typography/understanding-typography.html" target="_blank">Comprendiendo la tipografia de Material</a></li>
-                    <li><a href="https://cardonaclaudia.wordpress.com/2017/12/14/mejores-tipografias-web-2018/" target="_blank">Tipografias recomendadas para web</a></li>
-                    <li><a href="https://developers.google.com/fonts/docs/getting_started" target="_blank">Como usar Google Fonts</a></li>
-                    
-                    
-                </ul>
-            <header><h3>Herramientas</h3></header>
-                <ul>
-                    <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
-                    <li><a href="https://www.monotype.com/fonts" target="_blank">Monotype Fonts</a></li>
-                </ul>
-            <header><h3>Prácticas</h3></header>
-            <ul>
-                <li><a href="../Test/google_fonts.html" target="_blank">Práctica Google Fonts</a></li>
-                <li><a href="../Test/pruebas_fuentes.html" target="_blank">Práctica Fuentes</a></li>
-            </ul>
-        <!-- </details> -->
-        
-    <!-- <details> -->
-        <summary>Prototipado</summary>
-        <header><h3>Teoria</h3></header>
-            <ul>
-            <li><a href="https://balsamiq.com/tutorials/articles/firstwireframe/" target="_blank">Crear tu primer Wireframe en Balsamiq</a></li>
-            <li><a href="https://balsamiq.com/learn/articles/wireframing-responsive-design/" target="_blank">Diseño adaptativo en Balsamiq</a></li>
-            <li><a href="https://wireframestogo.com/#/search=bootstrap" target="_blank">Símbolos de Bootstrap para Balsamiq</a></li>
-            <li><a href="https://openwebinars.net/academia/aprende/crear-app-figma/" target="_blank">Taller Figma: Crear app desde cero</a></li>
-            <li><a href="https://openwebinars.net/academia/aprende/figma/" target="_blank">Curso Figma</a></li>
-            <li><a href="https://openwebinars.net/academia/aprende/wireframing-figma/" target="_blank">Taller Figma: Wireframing con Figma</a></li>
-        </ul>
-        <header><h3>Herramientas</h3></header>
-            <ul>
-                <li><a href="https://www.figma.com" target="_blank">Figma Web</a></li>
-                <li><a href="https://www.figma.com/downloads/" target="_blank">Figma Desktop</a></li>
-                <li><a href="https://balsamiq.com/wireframes/cloud/" target="_blank">Balsamiq Cloud</a></li>
-                <li><a href="https://balsamiq.com/" target="_blank">Balsamiq</a></li>                
-            </ul>
-        <header><h3>Prácticas</h3></header>
-            <ul>
-                <li><a href="../PDF/Prototipado_Figma_Alberto_Velazquez_Rapado.pdf" target="_blank">Práctica prototipado en Figma</a></li>
-                <li><a href="../Balsamiq/Proyecto_Prueba.pdf" target="_blank">Primer Wireframe Balsamiq</a></li>
-                <li><a href="../PDF/Tema_1_Creating_Your_First_Wireframe.pdf" target="_blank">Como hacer primer Wireframe en Balsamiq</a></li>
-            </ul>
-    <!-- </details> -->
-        <!-- <details> -->
-            <summary>Guías de Estilos</summary>
-            <header><h3>Teoria</h3></header>
-                <ul>
-                <li><a href="http://www.jcyl.es/junta/guia/guia-estilos.html" target="_blank">Guía de Estilos de la JCyL</a></li>
-                <li><a href="../PDF/guia_estilos_upv.pdf" target="_blank">Guía de Estilos de la UPV</a></li>
-                <li><a href="https://www.ibm.com/design/language/" target="_blank">Guía de Estilos de IBM</a></li>
-            </ul>
-            <header><h3>Herramientas</h3></header>
-                <ul>
-                    <li><a href="#" target="_blank">#</a></li>
-                
-                </ul>
-            <header><h3>Prácticas</h3></header>
-                <ul>
-                    <li><a href="../PDF/Tema_1_Guia_Estilos.pdf" target="_blank">Guía Estilo del prototipo de Figma</a></li>
-                </ul>
-        <!-- </details> -->
+            </div>
+        </nav>
     </div>
-    <footer>
-        <h6>IES Ribera de Castilla</h6>
-        <h6>by Alberto Velázquez Rapado</h6>
+    <!-- Los links del toggler -->
+    <ul class="sidenav" id="nav-mobile">
+        <li><a href="./tema0.html">Tema 0</a></li>
+        <li><a class="active" href="./tema1.html">Tema 1</a></li>
+        <li><a href="./tema2.html">Tema 2</a></li>
+        <li><a href="./tema3.html">Tema 3</a></li>
+        <li><a href="./tema4.html">Tema 4</a></li>
+        <li><a href="./tema5.html">Tema 5</a></li>
+        <li><a href="./tema6.html">Tema 6</a></li>
+    </ul>
+
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><span class="material-symbols-outlined">
+                    expand_more
+                </span>Planificación de interfaces gráficas</div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Colores</div>
+                        <div class="collapsible-body">
+                            <header>
+                                <h3>Teoria</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../PDF/Tema_1_Material_Components_V2.pdf" target="_blank">Componentes de
+                                        Material</a></li>
+                                <li><a href="../PDF/Tema_1_El_Sistema_de_colores.pdf" target="_blank">Sistema de colores
+                                        de Material</a>
+                                </li>
+                                <li><a href="../PDF/Tema_1_Color_Interfaz_Usuario.pdf" target="_blank">Color en la UI de
+                                        Material</a></li>
+                                <li><a href="https://creativolandia.com/como-elegir-los-colores-para-mi-web/"
+                                        target="_blank">Como escoger
+                                        colores para una Web</a></li>
+                            </ul>
+                            <header>
+                                <h3>Herramientas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://material.io/resources/color/#!/?view.left=0&view.right=0"
+                                        target="_blank">Herramienta
+                                        color Material</a></li>
+                                <li><a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors"
+                                        target="_blank">Creador de Paletas Material</a></li>
+                                <li><a href="https://www.colourlovers.com/" tarjet="_blank">Color Lovers</a></li>
+                                <li><a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF"
+                                        tarjet="_blank">Paletton</a></li>
+                                <li><a href="https://www.canva.com/colors/color-wheel/" tarjet="_blank">Canva</a></li>
+                                <li><a href="https://aulacm.com/gama-colores-diseno-grafico-web/" tarjet="_blank">Más
+                                        Herrramientas</a></li>
+                            </ul>
+                            <header>
+                                <h3>Prácticas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../PDF/Tema_1_Color_Tools.pdf" target="_blank">Herramienta de color de
+                                        Material</a></li>
+                                <li><a href="https://material.io/resources/color/#!/?view.left=1&view.right=0&secondary.color=76ff03&primary.color=334237"
+                                        target="_blank">Esquema de color escogido de Material</a></li>
+                                <li><a href="../PDF/Tema_1_Balsamiq.pdf" target="_blank">Aplicando esquema de color a
+                                        componentes en
+                                        Balsamiq</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Iconos</div>
+                        <div class="collapsible-body">
+                            <header>
+                                <h3>Teoria</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://www.w3schools.com/css/css_icons.asp" target="_blank">Como añadir
+                                        iconos por
+                                        w3schools</a></li>
+                                <li><a href="https://developers.google.com/fonts/docs/material_icons#icon_font_for_the_web"
+                                        target="_blank">Guía de iconos de material </a></li>
+                                <li><a href="https://m2.material.io/design/iconography/product-icons.html#design-principles"
+                                        target="_blank">Principios de diseño de los iconos de Material</a></lI>
+                                <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php"
+                                        target="_blank">Como usar iconos en Bootstrap</a></li>
+                            </ul>
+                            <header>
+                                <h3>Herramientas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://m3.material.io/resources/icons" target="_blank">Iconos Material</a>
+                                </li>
+                                <li><a href="https://fontawesome.com/icons" target="_blank">Iconos FonstAwesome</a></li>
+                                <li><a href="https://www.tutorialrepublic.com/bootstrap-icons-classes.php"
+                                        target="_blank">Iconos
+                                        Bootstrap</a></li>
+                            </ul>
+                            <header>
+                                <h3>Prácticas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../Test/material_icons.html" target="_blank">Iconos de Material</a></li>
+                                <li><a href="../Test/pratica_uso_Iconos_Local.html" target="_blank">Práctica de uso de
+                                        iconos con fuentes
+                                        descargadas en localmente</a></li>
+                                <li><a href="../Test/fonts_Awesome_Icons.html" target="_blank">Iconos de Font
+                                        Awesome</a></li>
+                                <li><a href="../Test/bootstrap_icons.html" target="_blank">Iconos de Bootstrap</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Fuentes</div>
+                        <div class="collapsible-body">
+                            <header>
+                                <h3>Teoria</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../PDF/Tema_1_Fonts.pdf" target="_blank">Instanciar fuentes</a></li>
+                                <li><a href="../PDF/Tema_1_Format_Fonts.pdf" target="_blank">Dar formato a fuentes</a>
+                                </li>
+                                <li><a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php"
+                                        target="_blank">Uso de
+                                        @font-face</a></li>
+                                <li><a href="https://refrescandonegocios.com/tipografias-pagina-web/"
+                                        target="_blank">Como esocoger
+                                        fuentes</a></li>
+                                <li><a href="https://m2.material.io/design/typography/understanding-typography.html"
+                                        target="_blank">Comprendiendo la tipografia de Material</a></li>
+                                <li><a href="https://cardonaclaudia.wordpress.com/2017/12/14/mejores-tipografias-web-2018/"
+                                        target="_blank">Tipografias recomendadas para web</a></li>
+                                <li><a href="https://developers.google.com/fonts/docs/getting_started"
+                                        target="_blank">Como usar Google
+                                        Fonts</a></li>
+
+
+                            </ul>
+                            <header>
+                                <h3>Herramientas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+                                <li><a href="https://www.monotype.com/fonts" target="_blank">Monotype Fonts</a></li>
+                            </ul>
+                            <header>
+                                <h3>Prácticas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../Test/google_fonts.html" target="_blank">Práctica Google Fonts</a></li>
+                                <li><a href="../Test/pruebas_fuentes.html" target="_blank">Práctica Fuentes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Prototipado</div>
+                        <div class="collapsible-body">
+                            <header>
+                                <h3>Teoria</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://balsamiq.com/tutorials/articles/firstwireframe/"
+                                        target="_blank">Crear tu primer
+                                        Wireframe en Balsamiq</a></li>
+                                <li><a href="https://balsamiq.com/learn/articles/wireframing-responsive-design/"
+                                        target="_blank">Diseño
+                                        adaptativo en Balsamiq</a></li>
+                                <li><a href="https://wireframestogo.com/#/search=bootstrap" target="_blank">Símbolos de
+                                        Bootstrap para
+                                        Balsamiq</a></li>
+                                <li><a href="https://openwebinars.net/academia/aprende/crear-app-figma/"
+                                        target="_blank">Taller Figma: Crear
+                                        app desde cero</a></li>
+                                <li><a href="https://openwebinars.net/academia/aprende/figma/" target="_blank">Curso
+                                        Figma</a></li>
+                                <li><a href="https://openwebinars.net/academia/aprende/wireframing-figma/"
+                                        target="_blank">Taller Figma:
+                                        Wireframing con Figma</a></li>
+                            </ul>
+                            <header>
+                                <h3>Herramientas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="https://www.figma.com" target="_blank">Figma Web</a></li>
+                                <li><a href="https://www.figma.com/downloads/" target="_blank">Figma Desktop</a></li>
+                                <li><a href="https://balsamiq.com/wireframes/cloud/" target="_blank">Balsamiq Cloud</a>
+                                </li>
+                                <li><a href="https://balsamiq.com/" target="_blank">Balsamiq</a></li>
+                            </ul>
+                            <header>
+                                <h3>Prácticas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../PDF/Prototipado_Figma_Alberto_Velazquez_Rapado.pdf"
+                                        target="_blank">Práctica prototipado en
+                                        Figma</a></li>
+                                <li><a href="../Balsamiq/Proyecto_Prueba.pdf" target="_blank">Primer Wireframe
+                                        Balsamiq</a></li>
+                                <li><a href="../PDF/Tema_1_Creating_Your_First_Wireframe.pdf" target="_blank">Como hacer
+                                        primer Wireframe en
+                                        Balsamiq</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Guías de Estilos</div>
+                        <div class="collapsible-body">
+                            <header>
+                                <h3>Teoria</h3>
+                            </header>
+                            <ul>
+                                <li><a href="http://www.jcyl.es/junta/guia/guia-estilos.html" target="_blank">Guía de
+                                        Estilos de la JCyL</a>
+                                </li>
+                                <li><a href="../PDF/guia_estilos_upv.pdf" target="_blank">Guía de Estilos de la UPV</a>
+                                </li>
+                                <li><a href="https://www.ibm.com/design/language/" target="_blank">Guía de Estilos de
+                                        IBM</a></li>
+                            </ul>
+                            <header>
+                                <h3>Herramientas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="#" target="_blank">#</a></li>
+
+                            </ul>
+                            <header>
+                                <h3>Prácticas</h3>
+                            </header>
+                            <ul>
+                                <li><a href="../PDF/Tema_1_Guia_Estilos.pdf" target="_blank">Guía Estilo del prototipo
+                                        de Figma</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <!-- El footer -->
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <!-- texto del footer -->
+                <div class="col l6 s12">
+                    <h5 class="white-text">Diseño de Interfaces Web</h5>
+                    <p class="grey-text text-lighten-4">Esta página web ha sido diseñada para la asignatura de Diseño de
+                        Interfaces Web a lo largo del segundo año de Desarrollo de Aplicaciones Web.</p>
+                </div>
+                <!-- links de footer -->
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links interés</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://www.educa.jcyl.es/es"
+                                tarjet="_blank">EducaCyl</a></li>
+                        <li><a class="grey-text text-lighten-3" href="../PruebaCubo/cubo.html">Mi cubo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                IES Ribera de Castilla
+                <span class="grey-text text-lighten-4 right">by Alberto Velázquez Rapado</span>
+            </div>
+        </div>
     </footer>
 </body>
 <!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
-<script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script>
+<!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../frontEnd/materialize.js"></script>
+<script src="../frontEnd/init.js"></script>
+
 </html>

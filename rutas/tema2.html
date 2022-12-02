@@ -3,60 +3,100 @@
 
 <head>
     <title>Tema 2 - Diseño Interfaces</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alberto Velázquez Rapado">
+    <link rel="shortcut icon" href="../static/ies-ribera-de-castilla_icon.png">
     <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
     <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../materialize-v1.0.0/materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link href="../static/materialize.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <nav class="teal darken-4">
-        <div class="nav-wrapper">
-                <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.jpg" width="30px">Diseño de Interfaces Web</a>
-            <!-- <h1>Diseño de Interfaces Web</h1>
-            <h6>by Alberto Velázquez Rapado</h6> -->
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="./tema0.html">Tema 0</a></li>
-                <li><a href="./tema1.html">Tema 1</a></li>
-                <li><a class="active" href="./tema2.html">Tema 2</a></li>
-                <li><a href="./tema3.html">Tema 3</a></li>
-                <li><a href="./tema4.html">Tema 4</a></li>
-                <li><a href="./tema5.html">Tema 5</a></li>
-                <li><a href="./tema6.html">Tema 6</a></li>
-            </ul>
-        </div>
-        
-    </nav>
-
-    <div class="primera_linea"><a href="https://www.educa.jcyl.es/es" tarjet="_blank">EducaCyl</a></div>
+    <div class="navbar-fixed">
+        <nav class="teal darken-4">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.png"
+                        width="30px">DINT</a>
+                <!-- <h1>Diseño de Interfaces Web</h1>
+                <h6>by Alberto Velázquez Rapado</h6> -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="./tema0.html">Tema 0</a></li>
+                    <li><a href="./tema1.html">Tema 1</a></li>
+                    <li><a class="active" href="./tema2.html">Tema 2</a></li>
+                    <li><a href="./tema3.html">Tema 3</a></li>
+                    <li><a href="./tema4.html">Tema 4</a></li>
+                    <li><a href="./tema5.html">Tema 5</a></li>
+                    <li><a href="./tema6.html">Tema 6</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <div>
         <p>Uso de estilos</p>
         <!-- <details> -->
-            <summary>Frameworks</summary>
-            <header><h3>Teoria</h3></header>
-                <ul>
-                    <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank">Documentación Bootstrap</a></li>
-                    <li><a href="https://materializecss.com/getting-started.html" target="_blank">Documentación Materialize</a></li>
-                </ul>
-            <header><h3>Herramientas</h3></header>
-                <ul>
-                    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-                    <li><a href="https://materializecss.com/" target="_blank">Materialize</a></li>
-                </ul>
-            <header><h3>Prácticas</h3></header>
-            <ul>
-                <li><a href="../bootstrap/album/index.html" target="_blank">Práctica modificar parametros de Bootstrap</a></li>
-            </ul>
+        <summary>Frameworks</summary>
+        <header>
+            <h3>Teoria</h3>
+        </header>
+        <ul>
+            <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank">Documentación
+                    Bootstrap</a></li>
+            <li><a href="https://materializecss.com/getting-started.html" target="_blank">Documentación Materialize</a>
+            </li>
+        </ul>
+        <header>
+            <h3>Herramientas</h3>
+        </header>
+        <ul>
+            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+            <li><a href="https://materializecss.com/" target="_blank">Materialize</a></li>
+        </ul>
+        <header>
+            <h3>Prácticas</h3>
+        </header>
+        <ul>
+            <li><a href="../bootstrap/album/index.html" target="_blank">Práctica modificar parametros de Bootstrap</a>
+            </li>
+        </ul>
         <!-- </details> -->
 
     </div>
-    <footer>
-        <h6>IES Ribera de Castilla</h6>
-        <h6>by Alberto Velázquez Rapado</h6>
+    <!-- El footer -->
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <!-- texto del footer -->
+                <div class="col l6 s12">
+                    <h5 class="white-text">Diseño de Interfaces Web</h5>
+                    <p class="grey-text text-lighten-4">Esta página web ha sido diseñada para la asignatura de Diseño de
+                        Interfaces Web a lo largo del segundo año de Desarrollo de Aplicaciones Web.</p>
+                </div>
+                <!-- links de footer -->
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links interés</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://www.educa.jcyl.es/es"
+                                tarjet="_blank">EducaCyl</a></li>
+                        <li><a class="grey-text text-lighten-3" href="../PruebaCubo/cubo.html">Mi cubo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                IES Ribera de Castilla
+                <span class="grey-text text-lighten-4 right">by Alberto Velázquez Rapado</span>
+            </div>
+        </div>
     </footer>
 </body>
 <!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
-<script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script>
+<!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../frontEnd/materialize.js"></script>
+<script src="../frontEnd/init.js"></script>
+
 </html>
