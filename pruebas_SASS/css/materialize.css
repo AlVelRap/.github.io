@@ -1,0 +1,89 @@
+.primario {
+  background-color: #334237 !important;
+}
+
+.primario-texto {
+  color: #334237 !important;
+}
+
+.primario.clara {
+  background-color: #5d6d61 !important;
+}
+
+.primario-texto.texto-clara {
+  color: #5d6d61 !important;
+}
+
+.primario.oscura {
+  background-color: #0d1b11 !important;
+}
+
+.primario-texto.texto-oscura {
+  color: #0d1b11 !important;
+}
+
+.primario.texto {
+  background-color: #76ff03 !important;
+}
+
+.primario-texto.texto-texto {
+  color: #76ff03 !important;
+}
+
+.secundario {
+  background-color: #76ff03 !important;
+}
+
+.secundario-texto {
+  color: #76ff03 !important;
+}
+
+.secundario.claro {
+  background-color: #b0ff57 !important;
+}
+
+.secundario-texto.texto-claro {
+  color: #b0ff57 !important;
+}
+
+.secundario.oscuro {
+  background-color: #32cb00 !important;
+}
+
+.secundario-texto.texto-oscuro {
+  color: #32cb00 !important;
+}
+
+.secundario.texto {
+  background-color: #212121 !important;
+}
+
+.secundario-texto.texto-texto {
+  color: #212121 !important;
+}
+
+.black {
+  background-color: #000000 !important;
+}
+
+.black-texto {
+  color: #000000 !important;
+}
+
+.white {
+  background-color: #FFFFFF !important;
+}
+
+.white-texto {
+  color: #FFFFFF !important;
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+.transparent-texto {
+  color: transparent !important;
+}
+
+/*# sourceMappingURL=materialize.css.map */

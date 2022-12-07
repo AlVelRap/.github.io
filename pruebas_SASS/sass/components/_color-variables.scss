@@ -1,0 +1,42 @@
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$alberto-primario: (
+  "base":       #334237,
+  "clara":  #5d6d61,
+  "oscura":  #0d1b11,
+  "texto":  #76ff03,
+);
+
+$alberto-secundario: (
+  "base":       #76ff03,
+  "claro":  #b0ff57,
+  "oscuro":  #32cb00,
+  "texto": #212121,
+);
+
+$shades: (
+  "black":        #000000,
+  "white":        #FFFFFF,
+  "transparent":  transparent
+);
+
+$colors: (
+  "primario": $alberto-primario,
+  "secundario": $alberto-secundario,
+  "shades": $shades
+) !default;
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
+  @return null;
+}
