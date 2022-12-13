@@ -11,7 +11,7 @@
         },
         "args": [
           // "localhost/${workspaceFolderBasename}/${relativeFile}"
-          "localhost/dint/${workspaceFolderBasename}/${relativeFile}"
+          "localhost/AlVelRap.github.io/${workspaceFolderBasename}/${relativeFile}"
         ],
         "presentation": {
           "reveal": "never"
@@ -30,7 +30,7 @@
         },
         "args": [
           // "localhost/${workspaceFolderBasename}/${relativeFile}"
-          "localhost/dint/${workspaceFolderBasename}/${relativeFile}"
+          "localhost/AlVelRap.github.io/${workspaceFolderBasename}/${relativeFile}"
         ],
         "presentation": {
           "reveal": "never"

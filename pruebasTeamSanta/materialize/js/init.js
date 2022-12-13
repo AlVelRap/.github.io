@@ -5,9 +5,11 @@
         $('.parallax').parallax();
         $('.carousel').carousel();
         $('.carousel.carousel-slider').carousel({
+            duration: 1000,
             fullWidth: true,
-            indicators: true
+            indicators: false
         });
+        setInterval(()=>{$('.carousel.carousel-slider').carousel('next')},2000)
         // move next carousel
         $('.moveNextCarousel').click(function (e) {
             e.preventDefault();
@@ -23,6 +25,10 @@
         });
 
         $('.collapsible').collapsible();
+        // $('#imagenes').carousel({
+        //     duration: 1000,
+
+        // });
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
