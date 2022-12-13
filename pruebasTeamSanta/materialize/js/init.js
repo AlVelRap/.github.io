@@ -9,7 +9,7 @@
             fullWidth: true,
             indicators: false
         });
-        setInterval(()=>{$('.carousel.carousel-slider').carousel('next')},2000)
+        setInterval(()=>{$('.carousel.carousel-slider').carousel('next')},4000)
         // move next carousel
         $('.moveNextCarousel').click(function (e) {
             e.preventDefault();
