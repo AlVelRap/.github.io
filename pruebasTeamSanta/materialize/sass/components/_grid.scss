@@ -142,6 +142,11 @@
           width: $perc;
           @include reset-offset;
         }
+        &.xl#{$i}.center-ball{
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
         $i: $i + 1;
       }
 

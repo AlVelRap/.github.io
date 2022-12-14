@@ -5,7 +5,7 @@
         $('.parallax').parallax();
         $('.carousel').carousel();
         $('.carousel.carousel-slider').carousel({
-            duration: 1000,
+            duration: 2000,
             fullWidth: true,
             indicators: false
         });
