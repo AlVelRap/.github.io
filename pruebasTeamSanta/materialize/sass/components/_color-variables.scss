@@ -324,6 +324,12 @@ $grey: (
   "darken-4":   #212121
 );
 
+$teamSanta: (
+  "base":       #D50000,
+  "claro":  #FF5131,
+  "oscuro":  #9C0000
+);
+
 $shades: (
   "black":        #000000,
   "white":        #FFFFFF,
@@ -351,6 +357,7 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
+  "primario":$teamSanta,
   "shades": $shades
 ) !default;
 
