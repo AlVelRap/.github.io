@@ -1,0 +1,66 @@
+// Intialize Variables
+$colorFondo: #303030;
+$colorTexto: #fff;
+$fuentes: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$colorFooter: #eee;
+$textoFooter: #303030;
+$colorNav: #369;
+
+// 
+
+body{
+    background-color: $colorFondo;
+    color: $colorTexto;
+    font-family: $fuentes;
+    // max-width: 800px;
+    // width: 100%;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav{
+    padding: 1rem;
+    background-color: $colorNav;
+    color: $colorTexto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    a{
+        text-decoration: none;
+        color: $colorTexto;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            margin: 0.5rem;
+        }
+    }
+}
+
+section{
+    display: flex;
+}
+
+footer{
+    display: flex;
+    background-color: $colorFooter;
+    color: $textoFooter;
+    ul{
+        margin: 0.3rem;
+        padding: 0.3rem;
+        list-style: none;
+    }
+  }
+
+
+
+
