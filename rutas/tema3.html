@@ -10,12 +10,14 @@
     <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
     <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="../static/materialize.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="navbar-fixed">
-        <nav class="teal darken-4">
+        <nav>
             <div class="nav-wrapper">
                 <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.png"
                         width="30px">DINT</a>
@@ -34,33 +36,38 @@
         </nav>
     </div>
 
-    <div>
-        <p>Implantación de contenido multimedia</p>
-        <details>
-            <summary>#</summary>
-            <header>
-                <h3>Teoria</h3>
-            </header>
-            <ul>
-                <li><a href="#" target="_blank">#</a></li>
-            </ul>
-            <header>
-                <h3>Herramientas</h3>
-            </header>
-            <ul>
-                <li><a href="#" target="_blank">#</a></li>
-            </ul>
-            <header>
-                <h3>Prácticas</h3>
-            </header>
-            <ul>
-                <li><a href="#" target="_blank">#</a></li>
-            </ul>
-        </details>
-
+    <!-- Colapsable -->
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12 m12 xl12">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><span class="material-symbols-outlined">
+                                expand_more
+                            </span>Implantación de contenido multimedia</div>
+                        <div class="collapsible-body">
+                            <h3>Teoria</h3>
+                            <ul>
+                                <li><a href="#" target="_blank">#</a></li>
+                            </ul>
+                            <h3>Herramientas</h3>
+                            <ul>
+                                <li><a href="#" target="_blank">#</a></li>
+                            </ul>
+                            <h3>Prácticas</h3>
+                            <ul>
+                                <li><a href="#" target="_blank">#</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    
     <!-- El footer -->
-    <footer class="page-footer teal">
+    <footer class="page-footer">
         <div class="container">
             <div class="row">
                 <!-- texto del footer -->
@@ -80,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright primary darken-2">
             <div class="container">
                 IES Ribera de Castilla
                 <span class="grey-text text-lighten-4 right">by Alberto Velázquez Rapado</span>

@@ -324,6 +324,34 @@ $grey: (
   "darken-4":   #212121
 );
 
+// Mis colores
+
+$ownPrimary:(
+  "base":       #334237,
+  "lighten-5":  lighten(#334237,25%),
+  "lighten-4":  lighten(#334237,20%),
+  "lighten-3":  lighten(#334237,15%),
+  "lighten-2":  lighten(#334237,10%),
+  "lighten-1":  lighten(#334237,5%),
+  "darken-1":   darken(#334237,5%),
+  "darken-2":   darken(#334237,10%),
+  "darken-3":   darken(#334237,15%),
+  "darken-4":   darken(#334237,20%)
+);
+
+$ownSecondary:(
+  "base":       #76ff03,
+  "lighten-5":  lighten(#76ff03,25%),
+  "lighten-4":  lighten(#76ff03,20%),
+  "lighten-3":  lighten(#76ff03,15%),
+  "lighten-2":  lighten(#76ff03,10%),
+  "lighten-1":  lighten(#76ff03,5%),
+  "darken-1":   darken(#76ff03,5%),
+  "darken-2":   darken(#76ff03,10%),
+  "darken-3":   darken(#76ff03,15%),
+  "darken-4":   darken(#76ff03,20%)
+);
+
 $shades: (
   "black":        #000000,
   "white":        #FFFFFF,
@@ -351,6 +379,8 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
+  "primary":$ownPrimary,
+  "secondary":$ownSecondary,
   "shades": $shades
 ) !default;
 
