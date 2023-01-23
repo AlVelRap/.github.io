@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes Responsive</title>
+</head>
+
+<body>
+    <figure>
+        <picture>
+            <source media="(max-width: 800px)" srcset="responsive/100.png">
+            <source media="(max-width: 1000px)" srcset="responsive/200.png">
+            <img src="responsive/400.png" alt="Esto es una prueba">
+        </picture>
+        <figcaption>An elephant at sunset</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <img srcset="responsive/100.png 480w, responsive/400.png 800w"
+                sizes="(max-width: 600px) 480px, 800px" src="responsive/400.png"
+                alt="Esto es una prueba 2">
+        </picture>
+        <figcaption>An elephant at sunset</figcaption>
+    </figure>
+</body>
+
+</html>
