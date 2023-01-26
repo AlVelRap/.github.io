@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>Document</title>
+    <style>
+        #myvideo {
+            width: 700px;
+            max-width: 100%;
+            margin: 2vw;
+        }
+
+        button {
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            /* border: solid 2px white; */
+            border: none;
+            min-width: 48px;
+            min-height: 48px;
+            width: 10vh;
+            height: 10vh;
+            margin: 5px 10px;
+            cursor: pointer;
+            box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: rgb(173, 45, 47);
+        }
+
+        .botonera {
+            display: flex;
+            /* width: 70vw; */
+            justify-content: center;
+            padding: 10px 15px;
+            background-color: #334237;
+            border-radius: 15px;
+        }
+
+        .videoContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .material-symbols-rounded {
+            font-size: 4em;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <video controls>
+        <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4" type="video/mp4">
+        <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.webm" type="video/webm">
+        <p>Your browser cannot play the provided video file.</p>
+    </video>
+    <video controls poster="./captura.png">
+        <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4#t=00:00:05,00:00:10" type="video/webm">
+    </video> -->
+    <div class="videoContainer">
+        <video poster="./captura.png" id="myvideo">
+            <source src="movie_clip.mp4" type="video/mp4">
+            <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.webm"
+                type="video/webm">
+            <track src="movie_clip2.en.vtt" label="English captions" kind="captions" srclang="en" default>
+            <track src="movie_clip2.es.vtt" label="Subtitulos en Español" kind="captions" srclang="es" default>
+            <p>El navegador no acepta la reproduccion del formato de video</p>
+        </video>
+    </div>
+    <div class="container">
+        <div class="botonera">
+            <button onclick="rewindVideo()">
+                <span class="material-symbols-rounded">
+                    fast_rewind
+                </span>
+            </button>
+            <button onclick="playVideo()">
+                <span class="material-symbols-rounded">
+                    play_arrow
+                </span>
+            </button>
+            <button onclick="pauseVideo()">
+                <span class="material-symbols-rounded">
+                    pause
+                </span>
+            </button>
+            <button onclick="forwardVideo()">
+                <span class="material-symbols-rounded">
+                    fast_forward
+                </span>
+            </button>
+            <!-- <button onclick="subtitles()">
+                <span class="material-symbols-rounded">
+                    closed_caption
+                </span>
+            </button> -->
+        </div>
+    </div>
+</body>
+</body>
+
+<script>
+    theVideo = document.querySelector("#myvideo");
+
+    function playVideo() {
+        theVideo.play();
+    }
+
+    function pauseVideo() {
+        theVideo.pause();
+    }
+
+    function stopVideo() {
+        theVideo.currentTime = 0;
+        theVideo.pause();
+    }
+
+    function rewindVideo() {
+        theVideo.currentTime = theVideo.currentTime - 5;
+    }
+
+    function forwardVideo() {
+        theVideo.currentTime = theVideo.currentTime + 5;
+    }
+
+    // function subtitles() {
+    //     for (let i = 0; i < theVideo.textTracks.length; i++) {
+    //         theVideo.textTracks[i].mode = 'hidden';
+    //     }
+    // }
+</script>
+
+</html>
