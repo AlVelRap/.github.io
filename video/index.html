@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.104.2">
+  <link rel="shortcut icon" href="../static/ies-ribera-de-castilla_icon.png" />
+  <title>Video Album · Bootstrap v5.2</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+
+
+
+  <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="../bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 5px 5px 0px 0px;
+      min-height: 236px;
+    }
+
+    .blur {
+      -webkit-filter: blur(3px);
+      -moz-filter: blur(3px);
+      -o-filter: blur(3px);
+      -ms-filter: blur(3px);
+      filter: blur(3px);
+    }
+
+    .brightness {
+      -webkit-filter: brightness(5);
+      -moz-filter: brightness(5);
+      -o-filter: brightness(5);
+      -ms-filter: brightness(5);
+      filter: brightness(5);
+    }
+
+    .contrast {
+      -webkit-filter: contrast(8);
+      -moz-filter: contrast(8);
+      -o-filter: contrast(8);
+      -ms-filter: contrast(8);
+      filter: contrast(8);
+    }
+
+    .hue-rotate {
+      -webkit-filter: hue-rotate(90deg);
+      -moz-filter: hue-rotate(90deg);
+      -o-filter: hue-rotate(90deg);
+      -ms-filter: hue-rotate(90deg);
+      filter: hue-rotate(90deg);
+    }
+
+    .hue-rotate2 {
+      -webkit-filter: hue-rotate(180deg);
+      -moz-filter: hue-rotate(180deg);
+      -o-filter: hue-rotate(180deg);
+      -ms-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+    }
+
+    .hue-rotate3 {
+      -webkit-filter: hue-rotate(270deg);
+      -moz-filter: hue-rotate(270deg);
+      -o-filter: hue-rotate(270deg);
+      -ms-filter: hue-rotate(270deg);
+      filter: hue-rotate(270deg);
+    }
+
+    .saturate {
+      -webkit-filter: saturate(10);
+      -moz-filter: saturate(10);
+      -o-filter: saturate(10);
+      -ms-filter: saturate(10);
+      filter: saturate(10);
+    }
+
+    .grayscale {
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      -o-filter: grayscale(1);
+      -ms-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+
+    .sepia {
+      -webkit-filter: sepia(1);
+      -moz-filter: sepia(1);
+      -o-filter: sepia(1);
+      -ms-filter: sepia(1);
+      filter: sepia(1);
+    }
+
+    .invert {
+      -webkit-filter: invert(1);
+      -moz-filter: invert(1);
+      -o-filter: invert(1);
+      -ms-filter: invert(1);
+      filter: invert(1);
+    }
+
+    .card {
+      min-height: 400px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-white">This is an album with the different actions that we can perform on a video. From reassigning functions to buttons, going through adding subtitles, even applying filters.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <!-- <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+            viewBox="0 0 24 24">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+          <strong>Album</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Video Album</h1>
+          <p class="lead text-muted">This is an album with the different actions that we can perform on a video. From reassigning functions to buttons, going through adding subtitles, even applying filters.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <!-- Card 1 -->
+            <div class="card shadow-sm">
+              <video poster="./Star_Wars_Logo.svg.png" controls="controls" id="myVideo1">
+                <source src="movie_clip.mp4" type="video/mp4" />
+                <source src="movie_clip.ogg" type="video/ogg" />
+                Your browser does not support the video element.
+              </video>
+              <div class="card-body">
+                <p class="card-text">Example of custom controls</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                    <button onclick="playVideo();" class="btn btn-success">
+                      <span class="material-symbols-rounded">
+                        <span class="material-symbols-rounded">
+                          play_arrow
+                        </span>
+                      </span>
+                    </button>
+                    <button onclick="pauseVideo();" class="btn btn-warning">
+                      <span class="material-symbols-rounded">
+                        pause
+                      </span>
+                    </button>
+                    <button onclick="stopVideo()" class="btn btn-danger">
+                      <span class="material-symbols-rounded">
+                        stop
+                      </span>
+                    </button>
+                    <button onclick="rewindVideo();" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        fast_forward
+                      </span>
+                    </button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Card 2 -->
+            <div class="card shadow-sm">
+              <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg> -->
+
+              <video poster="./Star_Wars_Logo.svg.png" controls="controls" id="myVideo2">
+                <source src="movie_clip.mp4" type="video/mp4" />
+                <source src="movie_clip.ogg" type="video/ogg" />
+                Your browser does not support the video element.
+              </video>
+
+              <div class="card-body">
+                <p class="card-text">Example of video events</p>
+                <p class="card-text" id="status">Status</p>
+                <p class="card-text" id="info">Info</p>
+                <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Card 3 -->
+            <div class="card shadow-sm">
+              <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg> -->
+              <video poster="./Star_Wars_Logo.svg.png" controls="controls" id="myVideo3">
+                Your browser does not support the video element.
+              </video>
+              <div class="card-body">
+                <p class="card-text">Video player with playlist.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                    <button onclick="playVideo3();" class="btn btn-success">
+                      <span class="material-symbols-rounded">
+                        play_arrow
+                      </span>
+                    </button>
+                    <button onclick="pauseVideo3();" class="btn btn-warning">
+                      <span class="material-symbols-rounded">
+                        pause
+                      </span>
+                    </button>
+                    <button onclick="previous()" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        skip_previous
+                      </span>
+                    </button>
+                    <button onclick="next();" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        skip_next
+                      </span>
+                    </button>
+                    <div id="info"></div>
+                    </header>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Card 4 -->
+            <div class="card shadow-sm">
+              <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg> -->
+              <video poster="./Star_Wars_Logo.svg.png" controls="controls" id="myVideo4">
+                <source src="movie_clip2.mp4" type="video/mp4">
+                <source src="movie_clip2.ogg" type="video/ogg">
+                <p>Your browser does not support HTML5 video</p>
+              </video>
+              <div class="card-body">
+                <p class="card-text">Applying CSS Transforms to Video</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                    <button onclick="playVideo4();" class="btn btn-success">
+                      <span class="material-symbols-rounded">
+                        play_arrow
+                      </span>
+                    </button>
+                    <button onclick="pauseVideo4();" class="btn btn-warning">
+                      <span class="material-symbols-rounded">
+                        pause
+                      </span>
+                    </button>
+                    <button onclick="zoomIn();" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        zoom_in
+                      </span>
+                    </button>
+                    <button onclick="zoomOut();" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        zoom_out
+                      </span>
+                    </button>
+                    <button onclick="rotateLeft();" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        rotate_left
+                      </span>
+                    </button>
+                    <button onclick="rotateRight();" class="btn btn-info">
+                      <span class="material-symbols-rounded">
+                        rotate_right
+                      </span>
+                    </button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Card 5 -->
+            <div class="card shadow-sm">
+              <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg> -->
+              <video poster="./Star_Wars_Logo.svg.png" id="output" controls autoplay>
+                <!-- I have three versions of the video encoded with
+                     different codecs.  The browser will automatically
+                     choose the first one it knows it can play. -->
+                <source src=http://html5doctor.com/demos/video-canvas-magic/video.webm type=video/webm>
+                <source src=http://html5doctor.com/demos/video-canvas-magic/video.ogg type=video/ogg>
+                <source src=http://html5doctor.com/demos/video-canvas-magic/video.mp4 type=video/mp4>
+              </video>
+
+              <div class="card-body">
+                <p class="card-text">Click the video to apply CSS3 effects!</p>
+                <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Card 6 -->
+            <div class="card shadow-sm">
+              <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg> -->
+              <video poster="./Star_Wars_Logo.svg.png" controls="controls" id="myVideo6">
+                <source src="movie_clip2.mp4" type="video/mp4" />
+                <source src="movie_clip2.ogg" type="video/ogg" />
+                <track kind=captions src=movie_clip2.en.vtt srclang=en lang=en label="English" default>
+                <track kind=captions src=movie_clip2.es.vtt srclang=es lang=es label="Spanish">
+              </video>
+
+              <div class="card-body">
+                <p class="card-text">Example of subtitles.</p>
+                <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+      <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+          href="../getting-started/introduction/">getting started guide</a>.</p>
+    </div>
+  </footer>
+
+
+  <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Para video 1 -->
+  <script>
+    theVideo1 = document.querySelector("#myVideo1");
+
+    function playVideo() {
+      theVideo1.play();
+    }
+
+    function pauseVideo() {
+      theVideo1.pause();
+    }
+
+    function stopVideo() {
+      theVideo1.currentTime = 0;
+      theVideo1.pause();
+    }
+
+    function rewindVideo() {
+      theVideo1.currentTime += 5;
+    }
+  </script>
+  <!-- Para video 2 -->
+  <script type='text/javascript'>
+    var theVideo2 = document.querySelector('#myVideo2');
+
+    // We add listeners
+    theVideo2.addEventListener('play', videoPlaying, false);
+    theVideo2.addEventListener('ended', videoEnded, false);
+    theVideo2.addEventListener('timeupdate', videoTimeUpdate, false);
+
+    function videoPlaying(e) {
+      var status = document.querySelector('#status');
+      status.innerHTML = 'Video is playing';
+    }
+
+    function videoEnded(e) {
+      var status = document.querySelector('#status');
+      status.innerHTML = 'End of the video';
+    }
+
+    function videoTimeUpdate(e) {
+      var info = document.querySelector('#info');
+      info.innerHTML = theVideo2.currentTime;
+    }
+  </script>
+  <!-- Para video 3 -->
+  <script type='text/javascript'>
+    theVideo3 = document.querySelector("#myVideo3");
+    info = document.querySelector("#info");
+    var videos = ['movie_clip', 'movie_clip2', 'movie_clip3'];
+    var current = 0;
+
+    function playVideo3() {
+      // The simplest way:
+      //theVideo3.src = videos[current] + '.mp4';
+
+      // adding suppor for various formats
+      theVideo3.innerHTML = "";
+      theVideo3.innerHTML = "<source src='" + videos[current] + ".mp4' type='video/mp4'>";
+      theVideo3.innerHTML += "<source src='" + videos[current] + ".ogg' type='video/ogg'>";
+      theVideo3.load();
+      theVideo3.play();
+      info.innerHTML = 'Now playing ' + videos[current];
+    }
+
+    function pauseVideo3() {
+      theVideo3.pause();
+      info.innerHTML = videos[current] + ' paused';
+    }
+
+    function previous() {
+      if (current > 0) {
+        current--;
+      }
+      playVideo3();
+    }
+
+    function next() {
+      if (current < videos.length - 1) {
+        current++;
+      }
+      playVideo3();
+    }
+  </script>
+  <!-- Para video 4 -->
+  <script type='text/javascript'>
+    theVideo4 = document.querySelector("#myVideo4");
+    var zoom = 0;
+
+    function playVideo4() {
+      theVideo4.play();
+    }
+
+    function pauseVideo4() {
+      theVideo4.pause();
+    }
+
+    function zoomIn() {
+      zoom = zoom + 0.1;
+      theVideo4.style.transform = 'scale(' + zoom + ')';
+    }
+
+    function zoomOut() {
+      zoom = zoom - 0.1;
+      theVideo4.style.transform = 'scale(' + zoom + ')';
+    }
+
+    function rotateLeft() {
+
+    }
+
+    function rotateRight() {
+
+    }
+  </script>
+  <!-- Para el video 5 -->
+  <script>
+
+    var output = document.getElementById('output');
+
+    var idx = 0;
+    var filters = [
+      'grayscale',
+      'sepia',
+      'blur',
+      'brightness',
+      'contrast',
+      'hue-rotate', 'hue-rotate2', 'hue-rotate3',
+      'saturate',
+      'invert',
+      ''
+    ];
+
+    function changeFilter(e) {
+      var el = e.target;
+      var effect = filters[idx++ % filters.length];
+      if (effect) {
+        el.className = effect;
+      }
+      // Do not propagate the event
+      event.stopPropagation();
+      event.preventDefault();
+    }
+
+    output.addEventListener('click', changeFilter, false);
+  </script>
+
+</body>
+
+</html>

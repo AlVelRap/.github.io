@@ -15,6 +15,7 @@ import { CardComponent } from './card/card.component';
 import { VideoComponent } from './card/video/video.component';
 import { BotoneraComponent } from './card/botonera/botonera.component';
 import { GaleriaComponent } from './card/galeria/galeria.component';
+import { PruebaBootComponent } from './prueba-boot/prueba-boot.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { GaleriaComponent } from './card/galeria/galeria.component';
     VideoComponent,
     BotoneraComponent,
     GaleriaComponent,
+    PruebaBootComponent,
 
   ],
   imports: [
