@@ -1,134 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tema 6 - Diseño Interfaces</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Alberto Velázquez Rapado" />
-    <link
-      rel="shortcut icon"
-      href="../static/ies-ribera-de-castilla_icon.jpg"
-    />
-    <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-    <link href="../static/materialize.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="../index.html" class="brand-logo"
-            ><img
-              src="../static/ies-ribera-de-castilla_icon.jpg"
-              width="30px"
-            />Diseño de Interfaces Web</a
-          >
-          <!-- <h1>Diseño de Interfaces Web</h1>
-                <h6>by Alberto Velázquez Rapado</h6> -->
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="./tema0.html">Tema 0</a></li>
-            <li><a href="./tema1.html">Tema 1</a></li>
-            <li><a href="./tema2.html">Tema 2</a></li>
-            <li><a href="./tema3.html">Tema 3</a></li>
-            <li><a href="./tema4.html">Tema 4</a></li>
-            <li><a href="./tema5.html">Tema 5</a></li>
-            <li><a class="active" href="./tema6.html">Tema 6</a></li>
-          </ul>
-        </div>
-      </nav>
+<head>
+  <title>Tema 6 - Diseño Interfaces</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Alberto Velázquez Rapado" />
+  <link rel="shortcut icon" href="../static/ies-ribera-de-castilla_icon.jpg" />
+  <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
+  <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@500&display=swap"
+    rel="stylesheet">
+  <link href="../static/materialize.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.png"
+            width="30px">Diseño</a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-link" class="right hide-on-med-and-down">
+          <li><a href="./tema0.html">General</a></li>
+          <li><a href="./tema1.html">Planificación</a></li>
+          <li><a href="./tema2.html">Uso de estilos</a></li>
+          <li><a href="./tema3.html">Multimedia</a></li>
+          <li><a href="./tema5.html">Accesibilidad</a></li>
+          <li><a class="active" href="./tema6.html">Usabilidad</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Los links del toggler -->
+  <ul class="sidenav" id="nav-mobile">
+    <li><a href="./tema0.html">General</a></li>
+    <li><a href="./tema1.html">Planificación</a></li>
+    <li><a href="./tema2.html">Uso de estilos</a></li>
+    <li><a href="./tema3.html">Multimedia</a></li>
+    <li><a href="./tema5.html">Accesibilidad</a></li>
+    <li><a class="active" href="./tema6.html">Usabilidad</a></li>
+  </ul>
+
+  <!-- Colapsable -->
+  <div class="container">
+    <div class="row">
+      <div class="col l12 s12 m12 xl12">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">
+              <span class="material-symbols-outlined"> expand_more </span>Implementación de la usabilidad en la Web.
+              Diseño amigable
+            </div>
+            <div class="collapsible-body">
+              <h3>Teoria</h3>
+              <ul>
+                <li><a href="#" target="_blank">#</a></li>
+              </ul>
+              <h3>Herramientas</h3>
+              <ul>
+                <li><a href="#" target="_blank">#</a></li>
+              </ul>
+              <h3>Prácticas</h3>
+              <ul>
+                <li><a href="#" target="_blank">#</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <!-- Colapsable -->
+  <!-- El footer -->
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
-        <div class="col l12 s12 m12 xl12">
-          <ul class="collapsible">
+        <!-- texto del footer -->
+        <div class="col l6 s12">
+          <h5 class="white-text">Diseño de Interfaces Web</h5>
+          <p class="grey-text text-lighten-4">
+            Esta página web ha sido diseñada para la asignatura de Diseño de
+            Interfaces Web a lo largo del segundo año de Desarrollo de
+            Aplicaciones Web.
+          </p>
+        </div>
+        <!-- links de footer -->
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
             <li>
-              <div class="collapsible-header">
-                <span class="material-symbols-outlined"> expand_more </span
-                >Implementación de la usabilidad en la Web. Diseño amigable
-              </div>
-              <div class="collapsible-body">
-                <h3>Teoria</h3>
-                <ul>
-                  <li><a href="#" target="_blank">#</a></li>
-                </ul>
-                <h3>Herramientas</h3>
-                <ul>
-                  <li><a href="#" target="_blank">#</a></li>
-                </ul>
-                <h3>Prácticas</h3>
-                <ul>
-                  <li><a href="#" target="_blank">#</a></li>
-                </ul>
-              </div>
+              <a class="grey-text text-lighten-3" href="https://www.educa.jcyl.es/es" tarjet="_blank">EducaCyl</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="../PruebaCubo/cubo.html">Mi cubo</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-
-    <!-- El footer -->
-    <footer class="page-footer">
+    <div class="footer-copyright primary darken-2">
       <div class="container">
-        <div class="row">
-          <!-- texto del footer -->
-          <div class="col l6 s12">
-            <h5 class="white-text">Diseño de Interfaces Web</h5>
-            <p class="grey-text text-lighten-4">
-              Esta página web ha sido diseñada para la asignatura de Diseño de
-              Interfaces Web a lo largo del segundo año de Desarrollo de
-              Aplicaciones Web.
-            </p>
-          </div>
-          <!-- links de footer -->
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li>
-                <a
-                  class="grey-text text-lighten-3"
-                  href="https://www.educa.jcyl.es/es"
-                  tarjet="_blank"
-                  >EducaCyl</a
-                >
-              </li>
-              <li>
-                <a
-                  class="grey-text text-lighten-3"
-                  href="../PruebaCubo/cubo.html"
-                  >Mi cubo</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+        IES Ribera de Castilla
+        <span class="grey-text text-lighten-4 right">by Alberto Velázquez Rapado</span>
       </div>
-      <div class="footer-copyright primary darken-2">
-        <div class="container">
-          IES Ribera de Castilla
-          <span class="grey-text text-lighten-4 right"
-            >by Alberto Velázquez Rapado</span
-          >
-        </div>
-      </div>
-    </footer>
-  </body>
-  <!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
-  <!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="../frontEnd/materialize.js"></script>
-  <script src="../frontEnd/init.js"></script>
+    </div>
+  </footer>
+</body>
+<!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../frontEnd/materialize.js"></script>
+<script src="../frontEnd/init.js"></script>
+
 </html>
