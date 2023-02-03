@@ -1,152 +1,358 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Tema 2 - Diseño Interfaces</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Alberto Velázquez Rapado">
-    <link rel="shortcut icon" href="../static/ies-ribera-de-castilla_icon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Alberto Velázquez Rapado" />
+    <link
+      rel="shortcut icon"
+      href="../static/ies-ribera-de-castilla_icon.png"
+    />
     <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
     <!-- <link href="./bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="../static/materialize.css" rel="stylesheet" type="text/css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/materialize.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
+  <body>
     <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.png"
-                        width="30px">DINT</a>
-                <!-- <h1>Diseño de Interfaces Web</h1>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            ><img
+              src="../static/ies-ribera-de-castilla_icon.png"
+              width="30px"
+            />DINT</a
+          >
+          <!-- <h1>Diseño de Interfaces Web</h1>
                 <h6>by Alberto Velázquez Rapado</h6> -->
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="./tema0.html">Tema 0</a></li>
-                    <li><a href="./tema1.html">Tema 1</a></li>
-                    <li><a class="active" href="./tema2.html">Tema 2</a></li>
-                    <li><a href="./tema3.html">Tema 3</a></li>
-                    <li><a href="./tema4.html">Tema 4</a></li>
-                    <li><a href="./tema5.html">Tema 5</a></li>
-                    <li><a href="./tema6.html">Tema 6</a></li>
-                </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="./tema0.html">Tema 0</a></li>
+            <li><a href="./tema1.html">Tema 1</a></li>
+            <li><a class="active" href="./tema2.html">Tema 2</a></li>
+            <li><a href="./tema3.html">Tema 3</a></li>
+            <li><a href="./tema4.html">Tema 4</a></li>
+            <li><a href="./tema5.html">Tema 5</a></li>
+            <li><a href="./tema6.html">Tema 6</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Intro -->
+    <div class="container">
+      <div class="row center-align">
+        <div class="col s12 m8 offset-m2">
+          <h4 class="center-align">Tema 2 - Uso de estilos</h4>
+          <p class="encabezado center-align">
+            Un estilo es una combinación predefinida de un tipo de fuente,
+            color, tamaño de letra y distribución de elementos que puedes
+            aplicar en cualquier página web. Aplicar un estilo puede ayudarte a
+            mejorar el diseño y la presentación de tu página web.
+          </p>
+
+          <p class="encabezado center-align">
+            En este tema veremos distintas formas de dotar de estilo a nuestra
+            página web. Para ello recurriremos a distintos frameworks, como los
+            que podemos ver aquí debajo. Tambien sentaremos las bases del uso de
+            Flexbox.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col s10 offset-s1 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                class="img-tarjeta activator"
+                src="../static/Images/bootstrap.webp"
+              />
             </div>
-        </nav>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >Bootstrap<i class="material-icons right">more_vert</i></span
+              >
+              <a href="https://getbootstrap.com/">Link</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >Bootstrap<i class="material-icons right">close</i></span
+              >
+              <p>
+                Framework de frontEnd potente, ampliable y repleto de funciones.
+                Crea y personaliza con Sass, utilice el sistema Grid y los
+                componentes prediseñados y haga que los proyectos cobren vida
+                con potentes complementos de JavaScript.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col s10 offset-s1 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                class="img-tarjeta activator"
+                src="../static/Images/materialize.png"
+              />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >Materialize<i class="material-icons right">more_vert</i></span
+              >
+              <a href="https://materializecss.com/">Link</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >Materialize<i class="material-icons right">close</i></span
+              >
+              <p>
+                Framework de frontEnd basado en Material Design. Enfocado en la
+                experiencia del usuario, busca acelerar el desarrollo de
+                aplicacioones Web y facilitar la forma en que se trabaja a
+                traves de su documentación.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col s10 offset-s1 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                class="img-tarjeta activator"
+                src="../static/Images/sass.png"
+              />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >SASS<i class="material-icons right">more_vert</i></span
+              >
+              <a href="https://sass-lang.com/">Link</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >SASS<i class="material-icons right">close</i></span
+              >
+              <p>
+                SASS extiende al lenguaje CSS dotandole de nuevas
+                caracteristcias como la posibilidad de crear variables,
+                funciones, etc.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Colapsable -->
     <div class="container">
-        <div class="row">
-            <div class="col l12 s12 m12 xl12">
+      <div class="row">
+        <div class="col l12 s12 m12 xl12">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">
+                <span class="material-symbols-outlined"> expand_more </span>Uso
+                de estilos
+              </div>
+              <div class="collapsible-body">
                 <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header"><span class="material-symbols-outlined">
-                                expand_more
-                            </span>Uso de estilos</div>
-                        <div class="collapsible-body">
-                            <ul class="collapsible">
-                                <li>
-                                    <div class="collapsible-header"><span class="material-symbols-outlined">
-                                            expand_more
-                                        </span>Frameworks</div>
-                                    <div class="collapsible-body">
-                                        <header>
-                                            <h3>Teoria</h3>
-                                        </header>
-                                        <ul>
-                                            <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/"
-                                                    target="_blank">Documentación Bootstrap</a></li>
-                                            <li><a href="https://materializecss.com/getting-started.html"
-                                                    target="_blank">Documentación Materialize</a></li>
-                                            <li><a href="https://sass-lang.com/documentation/"
-                                                    target="_blank">Documentación
-                                                    SASS</a></li>
-                                            <li><a href="https://material.angular.io/" target="_blank">Doc. Material
-                                                    para
-                                                    Angular</a></li>
+                  <li>
+                    <div class="collapsible-header">
+                      <span class="material-symbols-outlined">
+                        expand_more </span
+                      >Frameworks
+                    </div>
+                    <div class="collapsible-body">
+                      <header>
+                        <h3>Teoria</h3>
+                      </header>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://getbootstrap.com/docs/5.2/getting-started/introduction/"
+                            target="_blank"
+                            >Documentación Bootstrap</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://materializecss.com/getting-started.html"
+                            target="_blank"
+                            >Documentación Materialize</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://sass-lang.com/documentation/"
+                            target="_blank"
+                            >Documentación SASS</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://material.angular.io/" target="_blank"
+                            >Doc. Material para Angular</a
+                          >
+                        </li>
+                      </ul>
+                      <header>
+                        <h3>Herramientas</h3>
+                      </header>
+                      <ul>
+                        <li>
+                          <a href="https://getbootstrap.com/" target="_blank"
+                            >Bootstrap</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://materializecss.com/" target="_blank"
+                            >Materialize</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://nodejs.org/es/" target="_blank"
+                            >NodeJS (para instalar el gestor de paquetes NPM)</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://sass-lang.com/" target="_blank"
+                            >SASS</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://material.angular.io/components/categories"
+                            target="_blank"
+                            >Componentes Material para Angular</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=35&codigo=35&inicio=20"
+                            target="_blank"
+                            >Como añadir Angular a Material</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://material.angular.io/guide/schematics"
+                            target="_blank"
+                            >Predeterminados Material para Angular</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://material.angular.io/guide/theming#using-a-pre-built-theme"
+                            target="_blank"
+                            >Estilos predefinidos Material</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://flexboxfroggy.com/#es"
+                            target="_blank"
+                            >Flex Frog (Juego para aprender Flex)</a
+                          >
+                        </li>
+                      </ul>
+                      <header>
+                        <h3>Prácticas</h3>
+                      </header>
+                      <ul>
+                        <li>
+                          <a
+                            href="../bootstrap/album/index.html"
+                            target="_blank"
+                            >Práctica modificar parametros de Bootstrap</a
+                          >
+                        </li>
 
-
-
-
-
-                                        </ul>
-                                        <header>
-                                            <h3>Herramientas</h3>
-                                        </header>
-                                        <ul>
-                                            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-                                            <li><a href="https://materializecss.com/" target="_blank">Materialize</a>
-                                            </li>
-                                            <li><a href="https://nodejs.org/es/" target="_blank">NodeJS (para instalar
-                                                    el gestor de
-                                                    paquetes NPM)</a></li>
-                                            <li><a href="https://sass-lang.com/" target="_blank">SASS</a></li>
-                                            <li><a href="https://material.angular.io/components/categories"
-                                                    target="_blank">Componentes Material para
-                                                    Angular</a></li>
-                                            <li><a href="https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=35&codigo=35&inicio=20"
-                                                    target="_blank">Como añadir Angular a Material</a></li>
-                                            <li><a href="https://material.angular.io/guide/schematics"
-                                                    target="_blank">Predeterminados Material para Angular</a></li>
-                                            <li><a href="https://material.angular.io/guide/theming#using-a-pre-built-theme"
-                                                    target="_blank">Estilos predefinidos Material</a></li>
-
-                                        </ul>
-                                        <header>
-                                            <h3>Prácticas</h3>
-                                        </header>
-                                        <ul>
-                                            <li><a href="../bootstrap/album/index.html" target="_blank">Práctica
-                                                    modificar
-                                                    parametros de Bootstrap</a>
-                                            <li><a href="../materialize-v1.0.0/parallax-template/index.html"
-                                                    target="_blank">Práctica modificar
-                                                    parametros de Materialize</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                        <li>
+                          <a
+                            href="../materialize-v1.0.0/parallax-template/index.html"
+                            target="_blank"
+                            >Práctica modificar parametros de Materialize</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../flex/index.html" target="_blank"
+                            >Práctica Flex</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
-            </div>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
     <!-- El footer -->
     <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <!-- texto del footer -->
+          <div class="col l6 s12">
+            <h5 class="white-text">Diseño de Interfaces Web</h5>
+            <p class="grey-text text-lighten-4">
+              Esta página web ha sido diseñada para la asignatura de Diseño de
+              Interfaces Web a lo largo del segundo año de Desarrollo de
+              Aplicaciones Web.
+            </p>
+          </div>
+          <!-- links de footer -->
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links interés</h5>
+            <ul>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://www.educa.jcyl.es/es"
+                  tarjet="_blank"
+                  >EducaCyl</a
+                >
+              </li>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="../PruebaCubo/cubo.html"
+                  >Mi cubo</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright primary darken-2">
         <div class="container">
-            <div class="row">
-                <!-- texto del footer -->
-                <div class="col l6 s12">
-                    <h5 class="white-text">Diseño de Interfaces Web</h5>
-                    <p class="grey-text text-lighten-4">Esta página web ha sido diseñada para la asignatura de Diseño de
-                        Interfaces Web a lo largo del segundo año de Desarrollo de Aplicaciones Web.</p>
-                </div>
-                <!-- links de footer -->
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links interés</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="https://www.educa.jcyl.es/es"
-                                tarjet="_blank">EducaCyl</a></li>
-                        <li><a class="grey-text text-lighten-3" href="../PruebaCubo/cubo.html">Mi cubo</a></li>
-                    </ul>
-                </div>
-            </div>
+          IES Ribera de Castilla
+          <span class="grey-text text-lighten-4 right"
+            >by Alberto Velázquez Rapado</span
+          >
         </div>
-        <div class="footer-copyright primary darken-2">
-            <div class="container">
-                IES Ribera de Castilla
-                <span class="grey-text text-lighten-4 right">by Alberto Velázquez Rapado</span>
-            </div>
-        </div>
+      </div>
     </footer>
-</body>
-<!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="../frontEnd/materialize.js"></script>
-<script src="../frontEnd/init.js"></script>
-
+  </body>
+  <!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
+  <!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../frontEnd/materialize.js"></script>
+  <script src="../frontEnd/init.js"></script>
 </html>

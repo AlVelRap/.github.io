@@ -1,0 +1,35 @@
+.encabezado {
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 16px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 18px;
+  }
+}
+
+$altura-s: 180px;
+$altura-m: 150px;
+$altura-l: 230px;
+$altura-xl: 270px;
+.img-tarjeta{
+    @media #{$small-and-down} {
+        height: $altura-s;
+      }
+    
+      @media #{$medium-and-up} {
+        height: $altura-m;
+      }
+    
+      @media #{$large-and-up} {
+        height: $altura-l;
+      }
+      @media #{$extra-large-and-up} {
+        height: $altura-xl;
+      }
+      
+}
