@@ -1,0 +1,20 @@
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
+
+.hero{
+  width: 100%;
+}

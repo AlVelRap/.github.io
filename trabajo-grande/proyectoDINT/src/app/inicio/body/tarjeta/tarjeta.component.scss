@@ -1,0 +1,16 @@
+.tarjeta{
+  padding-bottom: 15px;
+  @media screen {max-width: 790px;
+    width: auto;
+    max-width: 790px;
+  }
+}
+.tarjeta-body{
+  padding: 10px;
+}
+.tarjeta-title{
+  padding: 10px;
+}
+.tarjeta-text{
+  padding: 10px;
+}

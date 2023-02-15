@@ -1,0 +1,25 @@
+<div class="tarjeta">
+  <div class="row">
+    <div *ngIf="pos == 'izquierda'" class="col-xs-7 col-sm-7 col-md-12">
+      <div class="tarjeta-body">
+        <h5 class="tarjeta-title text-center">{{titulo}}</h5>
+        <p class="tarjeta-text text-center">{{body}}</p>
+        <div class="text-center">
+          <button class="btn btn-primary" routerLink="bodas">Ir</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-7 col-sm-5 col-md-12">
+      <img src="{{imagen}}" class="img-fluid" alt="...">
+    </div>
+    <div *ngIf="pos == 'derecha'" class="col-xs-7 col-sm-7 col-md-12">
+      <div class="tarjeta-body">
+        <h5 class="tarjeta-title text-center">{{titulo}}</h5>
+        <p class="tarjeta-text text-center">{{body}}</p>
+        <div class="text-center">
+          <button class="btn btn-primary" routerLink="bodas">Ir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
