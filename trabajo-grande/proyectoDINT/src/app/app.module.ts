@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { HeroComponent } from './inicio/hero/hero.component';
 import { BodyComponent } from './inicio/body/body.component';
 import { TarjetaComponent } from './inicio/body/tarjeta/tarjeta.component';
 import { FormularioComponent } from './inicio/formulario/formulario.component';
+import { CartaComponent } from './carta/carta.component';
+import { TarjetaCartaComponent } from './carta/tarjeta-carta/tarjeta-carta.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,11 @@ import { FormularioComponent } from './inicio/formulario/formulario.component';
     BodyComponent,
     TarjetaComponent,
     FormularioComponent,
+    CartaComponent,
+    TarjetaCartaComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
