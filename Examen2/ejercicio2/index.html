@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 2</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lato&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" type="text/css" href="ejercicio2/static/estilos.css" />
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="nav-principal">
+      <span class="material-symbols-rounded">
+        menu
+      </span>
+      <a href="ejercicio2/">
+        <h1>Exam Musem</h1>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link items-menu" href="ejercicio2/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link items-menu" href="ejercicio2/galeria.html">PICTURES</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Video -->
+    <div class="container" id="video">
+      <video id="myvideo" controls>
+        <source src="ejercicio2/static/media/Un paseo por la Casa Lis.mp4" type="video/mp4">
+        <source src="ejercicio2/static/media/Un paseo por la Casa Lis (video-converter.com).webm" type="video/webm">
+        <track src="ejercicio2/static/media/subtitles-en.vtt" label="English captions" kind="captions" srclang="en"
+          default>
+        <track src="ejercicio2/static/media/subtitles-es.vtt" label="Subtitulos Español" kind="captions" srclang="es"
+          default>
+        <p>El navegador no acepta la reproduccion del formato de video</p>
+      </video>
+      <!-- Botonera -->
+      <div class="contenedor">
+        <div class="botonera">
+          <button onclick="rewindVideo()">
+            <span class="material-symbols-rounded">
+              fast_rewind
+            </span>
+          </button>
+          <button onclick="playVideo()">
+            <span class="material-symbols-rounded">
+              play_arrow
+            </span>
+          </button>
+          <button onclick="pauseVideo()">
+            <span class="material-symbols-rounded">
+              pause
+            </span>
+          </button>
+          <button onclick="forwardVideo()">
+            <span class="material-symbols-rounded">
+              fast_forward
+            </span>
+          </button>
+        </div>
+
+      </div>
+      <!-- Texto -->
+      <div class="container">
+        <h2>The Lis house</h2>
+        <p class="content">Casa Lis is an urban palace nestled on the old city wall, ordered to be built by D. Miguel de
+          Lis (1855-1909). The person in charge of carrying out this project was Joaquín de Vargas y Aguirre
+          (1857-1935),
+          a native of Jerez de la Frontera, who landed in Salamanca to occupy the position of provincial architect. Don
+          Miguel de Lis owned a tanning factory that he had inherited from his father and which he adapted to the new
+          production systems in the last decade of the 19th century. This prosperous business provided him with a
+          comfortable economic position, so that D. Miguel is, at the time he builds his new urban palace, one of the
+          hundred largest taxpayers in Salamanca. Defined as a person skilled in business and a tireless worker, his
+          "modern" character can be appreciated in the conception of his new home.</p>
+      </div>
+
+  </main>
+
+  <footer>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <p>Visitanos en </p>
+          <p>C/Gibraltar,14 (37008) Salamanca 923121425 </p>
+        </div>
+        <div class="col">
+          <img class="mapa-footer" src="ejercicio2/static/media/mapa.PNG">
+        </div>
+        <div class="col">
+          Visit our Social Networks:
+          <div class="row centrar">
+            <img class="iconos-footer" src="ejercicio2/static/media/iconos/Instagram-Icon.png">
+            <img class="iconos-footer" src="ejercicio2/static/media/iconos/twitter.png">
+            <img class="iconos-footer" src="ejercicio2/static/media/iconos/fb.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+<script>
+  theVideo = document.querySelector("#myvideo");
+
+  function playVideo() {
+    theVideo.play();
+  }
+
+  function pauseVideo() {
+    theVideo.pause();
+  }
+
+  function stopVideo() {
+    theVideo.currentTime = 0;
+    theVideo.pause();
+  }
+
+  function rewindVideo() {
+    theVideo.currentTime = theVideo.currentTime - 5;
+  }
+
+  function forwardVideo() {
+    theVideo.currentTime = theVideo.currentTime + 5;
+  }
+</script>
+
+</html>
