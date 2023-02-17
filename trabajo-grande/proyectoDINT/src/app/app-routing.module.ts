@@ -2,24 +2,29 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartaComponent } from './carta/carta.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { RestauranteComponent } from './restaurante/restaurante.component';
 
 const routes: Routes = [
   {
-    path:"",
-    component:InicioComponent
+    path: '',
+    component: InicioComponent,
   },
   {
-    path:"inicio",
-    component:InicioComponent
+    path: 'inicio',
+    component: InicioComponent,
   },
   {
-    path:"carta",
-    component:CartaComponent
-  }
+    path: 'carta',
+    component: CartaComponent,
+  },
+  {
+    path: 'restaurante',
+    component: RestauranteComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -25,7 +25,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/assets/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
@@ -83,7 +83,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/assets/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
