@@ -9,17 +9,17 @@ export class BodyComponent {
   titulo_boda = 'BODAS';
   body_boda =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,';
-  img_boda = '../../../../assets/bodas.jpeg';
+  img_boda = '../../../../assets/media/images/bodas.jpeg';
 
   titulo_restaurante = 'RESTAURANTE';
   body_restaurante =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,';
-  img_restaurante = '../../../../assets/restaurante.jpg';
+  img_restaurante = '../../../../assets/media/images/restaurante.jpg';
 
   titulo_carta = 'CARTA';
   body_carta =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,';
-  img_carta = '../../../../assets/carta.jpg';
+  img_carta = '../../../../assets/media/images/carta.jpg';
 
   direccion = ["izquierda","derecha","izquierda"]
 }

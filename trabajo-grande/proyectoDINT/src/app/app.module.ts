@@ -13,6 +13,7 @@ import { TarjetaComponent } from './inicio/body/tarjeta/tarjeta.component';
 import { FormularioComponent } from './inicio/formulario/formulario.component';
 import { CartaComponent } from './carta/carta.component';
 import { TarjetaCartaComponent } from './carta/tarjeta-carta/tarjeta-carta.component';
+import { RestauranteComponent } from './restaurante/restaurante.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TarjetaCartaComponent } from './carta/tarjeta-carta/tarjeta-carta.compo
     FormularioComponent,
     CartaComponent,
     TarjetaCartaComponent,
+    RestauranteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
