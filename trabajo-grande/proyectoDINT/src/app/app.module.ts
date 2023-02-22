@@ -14,6 +14,10 @@ import { FormularioComponent } from './inicio/formulario/formulario.component';
 import { CartaComponent } from './carta/carta.component';
 import { TarjetaCartaComponent } from './carta/tarjeta-carta/tarjeta-carta.component';
 import { RestauranteComponent } from './restaurante/restaurante.component';
+import { BodasComponent } from './bodas/bodas.component';
+import { ReservarComponent } from './reservar/reservar.component';
+import { FormComponent } from './reservar/form/form.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { RestauranteComponent } from './restaurante/restaurante.component';
     CartaComponent,
     TarjetaCartaComponent,
     RestauranteComponent,
+    BodasComponent,
+    ReservarComponent,
+    FormComponent,
+    ModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

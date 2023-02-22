@@ -1,10 +1,10 @@
 <!-- <p>carta works!</p> -->
 <div class="text-center">
   <h1>Nuestra Carta</h1>
-  <div class="container my-5 w-100">
-    <div class="row">
+  <div class="container-fluid my-5">
+    <div class="row justify-content-center">
       <ng-template *ngIf="comidas" ngFor let-comida [ngForOf]="comidas.meals">
-        <app-tarjeta-carta class="col-xs-12 col-sm-12 col-md-6" [idPlato]="comida.idMeal"></app-tarjeta-carta>
+        <app-tarjeta-carta class="col-12 col-md-5" [idPlato]="comida.idMeal"></app-tarjeta-carta>
       </ng-template>
     </div>
   </div>

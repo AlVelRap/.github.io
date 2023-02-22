@@ -1,9 +1,9 @@
 .tarjeta{
   padding-bottom: 15px;
-  @media screen {max-width: 790px;
-    width: 100%;
-    max-width: 790px;
-  }
+  // @media screen {max-width: 790px;
+  //   width: 100%;
+  //   max-width: 790px;
+  // }
   .tarjeta-body{
     padding: 10px;
   }
@@ -15,8 +15,32 @@
   }
 }
 
+video{
+  width: 100%;
+}
 
 .texto-restaurante{
-  max-width: 500px;
+  max-width: 800px;
   font-size: $h3-font-size;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container-hero {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .btn-hero {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
+
+.hero{
+  width: 100%;
 }
