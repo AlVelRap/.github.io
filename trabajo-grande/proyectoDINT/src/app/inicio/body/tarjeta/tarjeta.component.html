@@ -1,4 +1,4 @@
-<div class="container-fluid tarjeta mt-3">
+<div class="container-fluid tarjeta my-3 p-0" [style.background-color]=bg [style.color]=color>
   <div class="row">
     <div *ngIf="pos == 'izquierda'" class="col-12">
       <div class="tarjeta-body">
@@ -10,7 +10,10 @@
       </div>
     </div>
     <div class="col-12">
-      <img src="{{ imagen }}" class="img-fluid" alt="..." />
+      <picture>
+        <source media="(min-width:650px)" srcset="../../../assets/media/images/La-Malquerida_grande.jpeg">
+        <img src="{{ imagen }}" class="img-fluid" alt="{{titulo}}" />
+      </picture>
     </div>
     <div *ngIf="pos == 'derecha'" class="col-12">
       <div class="tarjeta-body">

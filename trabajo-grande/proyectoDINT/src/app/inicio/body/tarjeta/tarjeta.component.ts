@@ -10,4 +10,6 @@ export class TarjetaComponent {
   @Input() body =""
   @Input() imagen =""
   @Input() pos =""
+  @Input() bg =""
+  @Input() color =""
 }

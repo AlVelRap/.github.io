@@ -22,4 +22,6 @@ export class BodyComponent {
   img_carta = '../../../../assets/media/images/carta.jpg';
 
   direccion = ["izquierda","derecha","izquierda"]
+  fondo=["#4B3900","#837656","#D6C5A0"]
+  texto=["#FFFFFF","#FFFFFF","#000000"]
 }

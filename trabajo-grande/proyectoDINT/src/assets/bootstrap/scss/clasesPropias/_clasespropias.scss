@@ -1,25 +1,25 @@
-.tarjeta{
+.tarjeta {
   padding-bottom: 15px;
   // @media screen {max-width: 790px;
   //   width: 100%;
   //   max-width: 790px;
   // }
-  .tarjeta-body{
+  .tarjeta-body {
     padding: 10px;
   }
-  .tarjeta-title{
+  .tarjeta-title {
     padding: 10px;
   }
-  .tarjeta-text{
+  .tarjeta-text {
     padding: 10px;
   }
 }
 
-video{
+video {
   width: 100%;
 }
 
-.texto-restaurante{
+.texto-restaurante {
   max-width: 800px;
   font-size: $h3-font-size;
 }
@@ -41,6 +41,53 @@ video{
   }
 }
 
-.hero{
+.hero {
   width: 100%;
+}
+
+// Navegador
+nav {
+  background-color: $primary;
+  color: $secondary;
+}
+
+.nav-link {
+  color: $secondary;
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: darken($secondary, $amount: 15%);
+}
+.navbar-toggler-icon{
+  color: $secondary;
+}
+
+// Botones
+.btn, .btn-lg {
+  color: $secondary;
+}
+.btn:hover, .btn-lg:hover {
+  background-color: lighten($primary, $amount: 15%);
+  color: darken($secondary, $amount: 15%);
+}
+
+// Footer
+
+footer {
+  background-color: #9e8f6e;
+  .img-footer {
+    background-color: $primary;
+  }
+}
+.subfooter {
+  background-color: #51462a;
+}
+
+
+// Formulario
+form{
+  background-color: #93B492;
+}
+.form-control{
+  background-color: #D9D9D9;
 }
