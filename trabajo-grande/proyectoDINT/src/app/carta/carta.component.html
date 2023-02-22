@@ -4,7 +4,7 @@
   <div class="container-fluid my-5">
     <div class="row justify-content-center">
       <ng-template *ngIf="comidas" ngFor let-comida [ngForOf]="comidas.meals">
-        <app-tarjeta-carta class="col-12 col-md-5" [idPlato]="comida.idMeal"></app-tarjeta-carta>
+        <app-tarjeta-carta class="col-12 col-md-8 col-lg-6" [idPlato]="comida.idMeal"></app-tarjeta-carta>
       </ng-template>
     </div>
   </div>

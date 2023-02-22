@@ -1,3 +1,13 @@
+// Variables
+$bg-btn:#000;
+$bg-footer: #9e8f6e;
+$bg-subfooter: #51462a;
+$bg-form: #93B492;
+$bg-form-control: #D9D9D9;
+$bg-modal:#6A5D3F;
+$text-modal:white;
+
+// Tarjetas
 .tarjeta {
   padding-bottom: 15px;
   // @media screen {max-width: 790px;
@@ -15,10 +25,12 @@
   }
 }
 
+// Video
 video {
   width: 100%;
 }
 
+// Restaurante
 .texto-restaurante {
   max-width: 800px;
   font-size: $h3-font-size;
@@ -54,40 +66,69 @@ nav {
 .nav-link {
   color: $secondary;
   font-weight: bold;
+  // font-family: $font-family-sans-serif;
 }
 .nav-link:hover {
   color: darken($secondary, $amount: 15%);
 }
-.navbar-toggler-icon{
+.navbar-toggler-icon, .navbar-toggler{
   color: $secondary;
+}
+.nav-link:focus{
+  color: darken($secondary, $amount: 15%);
+  text-decoration: solid $secondary;
 }
 
 // Botones
 .btn, .btn-lg {
+  background-color: $bg-btn;
   color: $secondary;
 }
 .btn:hover, .btn-lg:hover {
-  background-color: lighten($primary, $amount: 15%);
+  background-color: lighten($bg-btn, $amount: 15%);
   color: darken($secondary, $amount: 15%);
 }
 
 // Footer
 
 footer {
-  background-color: #9e8f6e;
+  background-color: $bg-footer;
   .img-footer {
-    background-color: $primary;
+    background-color: $bg-btn;
+    padding: 5px;
   }
 }
 .subfooter {
-  background-color: #51462a;
+  background-color: $bg-subfooter;
 }
 
 
 // Formulario
 form{
-  background-color: #93B492;
+  background-color: $bg-form;
 }
-.form-control{
-  background-color: #D9D9D9;
+.form-control,.form-select{
+  background-color: $bg-form-control;
 }
+
+// Modal
+.modal-content{
+  color: $text-modal;
+  background-color: $bg-modal;
+  .modal-body{
+    border: none;
+    form{
+      background-color: $bg-modal;
+    }
+  }
+
+  .modal-footer{
+    border: none;
+  }
+}
+
+// Iconos
+.fa-brands{
+  color: #000;
+}
+
