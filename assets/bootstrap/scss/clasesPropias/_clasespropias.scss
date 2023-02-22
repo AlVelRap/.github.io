@@ -1,0 +1,134 @@
+// Variables
+$bg-btn:#000;
+$bg-footer: #9e8f6e;
+$bg-subfooter: #51462a;
+$bg-form: #93B492;
+$bg-form-control: #D9D9D9;
+$bg-modal:#6A5D3F;
+$text-modal:white;
+
+// Tarjetas
+.tarjeta {
+  padding-bottom: 15px;
+  // @media screen {max-width: 790px;
+  //   width: 100%;
+  //   max-width: 790px;
+  // }
+  .tarjeta-body {
+    padding: 10px;
+  }
+  .tarjeta-title {
+    padding: 10px;
+  }
+  .tarjeta-text {
+    padding: 10px;
+  }
+}
+
+// Video
+video {
+  width: 100%;
+}
+
+// Restaurante
+.texto-restaurante {
+  max-width: 800px;
+  font-size: $h3-font-size;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container-hero {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .btn-hero {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
+
+.hero {
+  width: 100%;
+}
+
+// Navegador
+nav {
+  background-color: $primary;
+  color: $secondary;
+}
+
+.nav-link {
+  color: $secondary;
+  font-weight: bold;
+  // font-family: $font-family-sans-serif;
+}
+.nav-link:hover {
+  color: darken($secondary, $amount: 15%);
+}
+.navbar-toggler-icon, .navbar-toggler{
+  color: $secondary;
+}
+.nav-link:focus{
+  color: darken($secondary, $amount: 15%);
+  text-decoration: solid $secondary;
+}
+
+// Botones
+.btn, .btn-lg {
+  background-color: $bg-btn;
+  color: $secondary;
+}
+.btn:hover, .btn-lg:hover {
+  background-color: lighten($bg-btn, $amount: 15%);
+  color: darken($secondary, $amount: 15%);
+}
+
+// Footer
+
+footer {
+  background-color: $bg-footer;
+  .img-footer {
+    background-color: $bg-btn;
+    padding: 5px;
+  }
+}
+.subfooter {
+  background-color: $bg-subfooter;
+}
+
+
+// Formulario
+form{
+  background-color: $bg-form;
+}
+.form-control,.form-select{
+  background-color: $bg-form-control;
+}
+
+// Modal
+.modal-content{
+  color: $text-modal;
+  background-color: $bg-modal;
+  .modal-body{
+    border: none;
+    form{
+      background-color: $bg-modal;
+    }
+  }
+
+  .modal-footer{
+    border: none;
+  }
+}
+
+// Iconos
+.fa-brands{
+  color: #000;
+}
+
