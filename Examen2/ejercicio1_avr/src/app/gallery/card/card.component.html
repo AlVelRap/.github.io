@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-imagen">
+    <picture>
+      <source srcset="{{objeto.srcset}}" media="(max-width: 490px)">
+      <img src="{{objeto.src}}" alt="{{objeto.titulo}}">
+    </picture>
+    <div class="card-body">
+      <div class="card-title">
+        <h2>{{objeto.titulo}}</h2>
+      </div>
+      <div class="card-content content">
+        {{objeto.descripcion}}
+      </div>
+    </div>
+  </div>
+</div>

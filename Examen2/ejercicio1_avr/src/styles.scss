@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+// Fuentes
+$font-h1: "Babylonica", cursive;
+$font-h2: "Amiri", serif;
+$font-footer: "Zeyada", cursive;
+
+// Tamaños
+$big: 40px;
+$medium: 20px;
+$small: 15px;
+
+// Colores
+$primary: #0d3b66;
+$primaryClaro: #446594;
+$primaryOscuro: #00163b;
+
+$secondary: #82205c;
+$secondaryClaro: #b45189;
+$secondaryOscuro: #520032;
+
+$bg-body: #dcdcdc;
+$color-text-body: #232323;
+$color-text-p-s: #fff;
+
+// Clases
+// genericas
+body {
+  color: $color-text-body;
+  background-color: $bg-body;
+}
+
+h1 {
+  font-size: $big;
+  font-family: $font-h1;
+}
+h2 {
+  font-size: $medium;
+  font-family: $font-h2;
+  text-decoration: underline;
+}
+
+.content {
+  padding: 5px;
+  font-size: $small;
+  font-family: $font-h2;
+}
+
+a:hover,.nav-link:hover,.navbar-brand:hover, .nav-item:hover{
+  color:darken($color-text-p-s, 30%);
+}
+
+// footer
+footer {
+  background-color: $primary;
+  font-size: $medium;
+  font-family: $font-footer;
+  color: $color-text-p-s;
+  padding: 30px 0;
+  .mapa-footer {
+    width: 120px;
+  }
+  .iconos-footer {
+    padding: 0;
+    margin: 12px;
+    height: 30px;
+    width: 30px;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Navegador
+nav,
+.navbar,
+.navbar-brand {
+  justify-content: center;
+  background-color: $primary;
+  color: $color-text-p-s;
+  border: none;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.items-menu {
+  font-size: $medium;
+  font-family: $font-h1;
+  background-color: $primary;
+  color: $color-text-p-s;
+}
+
+// Video
+video {
+  margin: 2vw;
+  width: 100%;
+  max-width: 1131px;
+}
+#video {
+  .contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .botonera {
+      display: flex;
+      max-width: 500px;
+      justify-content: center;
+      padding: 10px 15px;
+      background-color: #334237;
+      border-radius: 15px;
+      margin: 2vh 0;
+
+      .material-symbols-rounded {
+        font-size: 2em;
+      }
+      button {
+        border-radius: 5px;
+        color: white;
+        background-color: red;
+        /* border: solid 2px white; */
+        border: none;
+        min-width: 48px;
+        min-height: 48px;
+        width: 10vh;
+        height: 10vh;
+        margin: 5px 10px;
+        cursor: pointer;
+        box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+      }
+      button:hover {
+        background-color: rgb(173, 45, 47);
+      }
+    }
+  }
+}
+
+// Galeria/cards
+.card {
+  border-radius: 32px;
+  background: $secondaryClaro;
+  display: flex;
+  flex-direction: column;
+  color: $color-text-p-s;
+  padding: 30px;
+  margin: 15px 0;
+  .card-imagen {
+    img {
+      width: 100%;
+    }
+  }
+  .card-body {
+    text-align: center;
+  }
+}
