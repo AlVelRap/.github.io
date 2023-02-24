@@ -1,150 +1,311 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Tema 0 - Diseño Interfaces</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Alberto Velázquez Rapado" />
+    <link
+      rel="shortcut icon"
+      href="../static/ies-ribera-de-castilla_icon.png"
+    />
+    <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="../bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/materialize.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <title>Tema 0 - Diseño Interfaces</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Alberto Velázquez Rapado" />
-  <link rel="shortcut icon" href="../static/ies-ribera-de-castilla_icon.png" />
-  <!-- <link href="../static/style.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="../bootstrap/assets/dist/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@500&display=swap"
-    rel="stylesheet">
-  <link href="../static/materialize.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="../index.html" class="brand-logo"><img src="../static/ies-ribera-de-castilla_icon.png"
-            width="30px" />Diseño</a>
-        <!-- <h1>Diseño de Interfaces Web</h1>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            ><img
+              src="../static/ies-ribera-de-castilla_icon.png"
+              width="30px"
+            />Diseño</a
+          >
+          <!-- <h1>Diseño de Interfaces Web</h1>
                 <h6>by Alberto Velázquez Rapado</h6> -->
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-links" class="right hide-on-med-and-down">
-          <li><a class="active" href="./tema0.html">General</a></li>
-          <li><a href="./tema1.html">Planificación</a></li>
-          <li><a href="./tema2.html">Uso de estilos</a></li>
-          <li><a href="./tema3.html">Multimedia</a></li>
-          <li><a href="./tema5.html">Accesibilidad</a></li>
-          <li><a href="./tema6.html">Usabilidad</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <ul class="sidenav" id="nav-mobile">
-    <li><a class="active" href="./tema0.html">General</a></li>
-    <li><a href="./tema1.html">Planificación</a></li>
-    <li><a href="./tema2.html">Uso de estilos</a></li>
-    <li><a href="./tema3.html">Multimedia</a></li>
-    <li><a href="./tema5.html">Accesibilidad</a></li>
-    <li><a href="./tema6.html">Usabilidad</a></li>
-  </ul>
-
-  <!-- Colapsable -->
-  <div class="container">
-    <div class="row">
-      <div class="col l12 s12 m12 xl12">
-        <ul class="collapsible">
-          <li>
-            <div class="collapsible-header">
-              <span class="material-symbols-outlined"> expand_more </span>General
-            </div>
-            <div class="collapsible-body">
-              <header>
-                <h3>Teoria</h3>
-              </header>
-              <ul>
-                <li>
-                  <a href="../PDF/Tema_0_devtools_firefox.pdf" target="_blank">Como usar DevTools de Firefox</a>
-                </li>
-                <li>
-                  <a href="https://developer.chrome.com/docs/devtools/" target="_blank">Como usar DevTools de Chrome</a>
-                </li>
-                <li>
-                  <a href="https://learn.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium/landing/"
-                    target="_blank">Como usar DevTools de Edge</a>
-                </li>
-                <li>
-                  <a href="https://markodenic.com/html-tips/" target="_blank">Tips HTML</a>
-                </li>
-              </ul>
-              <header>
-                <h3>Herramientas</h3>
-              </header>
-              <ul>
-                <li>
-                  <a href="https://markodenic.com/50-free-tools-and-resources/" target="_blank">50 Herramientas
-                    gratuitas</a>
-                </li>
-                <li>
-                  <a href="https://devdocs.io/" target="_blank">Documentación variada</a>
-                </li>
-              </ul>
-              <header>
-                <h3>Prácticas</h3>
-              </header>
-              <ul>
-                <li>
-                  <a href="../PDF/Tema_0_github_pages.pdf" target="_blank">Desplegar página con GitHub Pages</a>
-                </li>
-                <li>
-                  <a href="../PDF/Plantilla DAW.dotx" tarjet="_blank">Plantilla Word</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul id="nav-links" class="right hide-on-med-and-down">
+            <li><a class="active" href="./tema0.html">General</a></li>
+            <li><a href="./tema1.html">Planificación</a></li>
+            <li><a href="./tema2.html">Uso de estilos</a></li>
+            <li><a href="./tema3.html">Multimedia</a></li>
+            <li><a href="./tema5.html">Accesibilidad</a></li>
+            <li><a href="./tema6.html">Usabilidad</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </div>
+    <ul class="sidenav" id="nav-mobile">
+      <li><a class="active" href="./tema0.html">General</a></li>
+      <li><a href="./tema1.html">Planificación</a></li>
+      <li><a href="./tema2.html">Uso de estilos</a></li>
+      <li><a href="./tema3.html">Multimedia</a></li>
+      <li><a href="./tema5.html">Accesibilidad</a></li>
+      <li><a href="./tema6.html">Usabilidad</a></li>
+    </ul>
 
-  <!-- El footer -->
-  <footer class="page-footer">
+    <!-- Intro -->
     <div class="container">
-      <div class="row">
-        <!-- texto del footer -->
-        <div class="col l6 s12">
-          <h5 class="white-text">Diseño de Interfaces Web</h5>
-          <p class="grey-text text-lighten-4">
-            Esta página web ha sido diseñada para la asignatura de Diseño de
-            Interfaces Web a lo largo del segundo año de Desarrollo de
-            Aplicaciones Web.
+      <div class="row center-align">
+        <div class="col s12 m8 offset-m2">
+          <h4 class="center-align">Tema 0 - General</h4>
+          <p class="encabezado center-align">
+            Antes de empezar a trabajar es importante conocer las herramientas
+            que vamos a utilizar, por esa razón es buena idea comenzar un
+            proyecto conociendo de antemano las herramientas de las que
+            disponemos y el cómo usarlas.
+          </p>
+
+          <p class="encabezado center-align">
+            Comenzaremos esta andadura conociendo un poco algunas de las
+            herramientas con las que vamos a trabajar a lo largo del curso, en
+            este caso veremos las herramientas de desarrollador de los distintos
+            navegadores, también veremos como usar las páginas de GitHub Pages
+            para desplegar esta página.
           </p>
         </div>
-        <!-- links de footer -->
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links interés</h5>
-          <ul>
+      </div>
+    </div>
+
+    <!-- Colapsable -->
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12 m12 xl12">
+          <ul class="collapsible">
             <li>
-              <a class="grey-text text-lighten-3" href="https://www.educa.jcyl.es/es" tarjet="_blank">EducaCyl</a>
-            </li>
-            <li>
-              <a class="grey-text text-lighten-3" href="../PruebaCubo/cubo.html">Mi cubo</a>
+              <div class="collapsible-header">
+                <span class="material-symbols-outlined"> expand_more </span
+                >General
+              </div>
+              <div class="collapsible-body">
+                <header>
+                  <h3>Teoria</h3>
+                </header>
+                <ul>
+                  <li>
+                    <a href="../PDF/Tema_0_devtools_firefox.pdf" target="_blank"
+                      >Como usar DevTools de Firefox</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.chrome.com/docs/devtools/"
+                      target="_blank"
+                      >Como usar DevTools de Chrome</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://learn.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium/landing/"
+                      target="_blank"
+                      >Como usar DevTools de Edge</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://markodenic.com/html-tips/" target="_blank"
+                      >Tips HTML</a
+                    >
+                  </li>
+                </ul>
+                <header>
+                  <h3>Herramientas</h3>
+                </header>
+                <ul>
+                  <li>
+                    <a
+                      href="https://markodenic.com/50-free-tools-and-resources/"
+                      target="_blank"
+                      >50 Herramientas gratuitas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://devdocs.io/" target="_blank"
+                      >Documentación variada</a
+                    >
+                  </li>
+                </ul>
+                <header>
+                  <h3>Prácticas</h3>
+                </header>
+                <ul>
+                  <li>
+                    <a href="../PDF/Tema_0_github_pages.pdf" target="_blank"
+                      >Desplegar página con GitHub Pages</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../PDF/Plantilla DAW.dotx" tarjet="_blank"
+                      >Plantilla Word</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright primary darken-2">
-      <div class="container">
-        IES Ribera de Castilla
-        <span class="grey-text text-lighten-4 right">by Alberto Velázquez Rapado</span>
+
+    <!-- Tarjetas -->
+    <div class="container">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col s10 offset-s1 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                class="img-tarjeta activator"
+                src="../static/Images/Firefox_logo,_2019.svg.png"
+              />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >Firefox<i class="material-icons right">more_vert</i></span
+              >
+              <a href="https://www.mozilla.org/es-ES/firefox/new/">Link</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >Firefoxs<i class="material-icons right">close</i></span
+              >
+              <p>
+                Mozilla Firefox (o simplemente Firefox) es un navegador web
+                libre y de código abierto desarrollado para distintas
+                plataformas, está coordinado por la Corporación Mozilla y la
+                Fundación Mozilla. Usa el motor Gecko para renderizar páginas
+                web, el cual implementa actuales y futuros estándares web.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col s10 offset-s1 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                class="img-tarjeta activator"
+                src="../static/Images/Google_Chrome_icon_(February_2022).svg.png"
+              />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >Chrome<i class="material-icons right">more_vert</i></span
+              >
+              <a href="https://www.google.com/intl/es_es/chrome/">Link</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >Chrome<i class="material-icons right">close</i></span
+              >
+              <p>
+                Google Chrome es un navegador web de código cerrado desarrollado
+                por Google, aunque derivado de proyectos de código abierto (como
+                el motor de renderizado Blink). Está disponible gratuitamente.
+                El nombre del navegador deriva del término en inglés usado para
+                el marco de la interfaz gráfica de usuario («chrome»).
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col s10 offset-s1 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img
+                class="img-tarjeta activator"
+                src="../static/Images/GitHubPages.jpg"
+              />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >GitHub Pages<i class="material-icons right">more_vert</i></span
+              >
+              <a href="https://pages.github.com/">Link</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >GitHub Pages<i class="material-icons right">close</i></span
+              >
+              <p>
+                GitHub Pages es un servicio de alojamiento de sitio estático que
+                toma archivos HTML, CSS y JavaScript directamente desde un
+                repositorio en GitHub, opcionalmente ejecuta los archivos a
+                través de un proceso de complilación y publica un sitio web.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
-</body>
-<!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="../frontEnd/materialize.js"></script>
-<script src="../frontEnd/init.js"></script>
 
+    <!-- El footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <!-- texto del footer -->
+          <div class="col l6 s12">
+            <h5 class="white-text">Diseño de Interfaces Web</h5>
+            <p class="grey-text text-lighten-4">
+              Esta página web ha sido diseñada para la asignatura de Diseño de
+              Interfaces Web a lo largo del segundo año de Desarrollo de
+              Aplicaciones Web.
+            </p>
+          </div>
+          <!-- links de footer -->
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links interés</h5>
+            <ul>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://www.educa.jcyl.es/es"
+                  tarjet="_blank"
+                  >EducaCyl</a
+                >
+              </li>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="../PruebaCubo/cubo.html"
+                  >Mi cubo</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright primary darken-2">
+        <div class="container">
+          IES Ribera de Castilla
+          <span class="grey-text text-lighten-4 right"
+            >by Alberto Velázquez Rapado</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script> -->
+  <!-- <script src = "../materialize-v1.0.0/materialize/js/materialize.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../frontEnd/materialize.js"></script>
+  <script src="../frontEnd/init.js"></script>
 </html>
